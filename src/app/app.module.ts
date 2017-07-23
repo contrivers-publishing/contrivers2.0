@@ -8,6 +8,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { FeaturedComponent } from './featured/featured.component';
 import { FooterComponent } from './footer/footer.component';
+import { SubscriptionComponent } from './articles/subscription/subscription.component';
+import { PieceComponent } from './articles/piece/piece.component';
+import { ContentControlComponent } from './articles/content-control/content-control.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { FooterComponent } from './footer/footer.component';
     NavbarComponent,
     ArticlesComponent,
     FeaturedComponent,
-    FooterComponent
+    FooterComponent,
+    SubscriptionComponent,
+    PieceComponent,
+    ContentControlComponent
   ],
   imports: [
     BrowserModule,
