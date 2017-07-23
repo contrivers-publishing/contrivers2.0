@@ -21,10 +21,7 @@
       "styles": [
         "styles.scss"
       ],
-      "scripts": [
-        "../node_modules/foundation-sites/vendor/jquery/dist/jquery.min.js",
-        "../node_modules/foundation-sites/dist/js/foundation.min.js"
-      ],
+      "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
