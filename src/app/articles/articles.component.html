@@ -1,71 +1,20 @@
 <div class="row">
-  <div class="large-12 columns">
+    <div class="large-12 columns">
 
-    <app-content-control></app-content-control>
+        <app-content-control></app-content-control>
 
-  <article>
+        <article>
 
-    <app-piece *ngFor="let num of [0,1,2,3,4]" [attr.data-index]="num"></app-piece>
+            <app-piece *ngFor="let article of articles" [article]='article'>{{article}}</app-piece>
 
-    <hr>
+            <hr>
 
-    <div class="row">
-      <div class="large-4 columns">
-        <p><img src="http://placehold.it/400x200&text=Look at me!" alt="image for article" alt="article preview image"></p>
-      </div>
-      <div class="large-8 columns">
-        <h5><a href="#">Ingredients for Life Were Always Present on Earth, Comet Suggests</a></h5>
-        <p>
-          <span><i class="fa fa-user"> By Thadeus &nbsp;&nbsp;</i></span>
-          <span><i class="fa fa-calendar"> 11/23/16 &nbsp;&nbsp;</i></span>
-          <span><i class="fa fa-share"></i> Share</span>
-        </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae impedit beatae, ipsum delectus aperiam nesciunt magni facilis ullam.</p>
-      </div>
+            <div class="row column">
+                <a class="button hollow expanded">Load More</a>
+            </div>
+
+        </article>
+
     </div>
-
-    <hr>
-
-    <div class="row">
-      <div class="large-4 columns">
-        <p><img src="http://placehold.it/400x200&text=Look at me!" alt="image for article" alt="article preview image"></p>
-      </div>
-      <div class="large-8 columns">
-        <h5><a href="#">Astronaut's Watch Worn on the Moon Sells for Record $1.6 Million</a></h5>
-        <p>
-          <span><i class="fa fa-user"> By Thadeus &nbsp;&nbsp;</i></span>
-          <span><i class="fa fa-calendar"> 11/23/16 &nbsp;&nbsp;</i></span>
-          <span><i class="fa fa-share"></i> Share</span>
-        </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae impedit beatae, ipsum delectus aperiam nesciunt magni facilis ullam.</p>
-      </div>
-    </div>
-
-    <hr>
-
-    <div class="row">
-      <div class="large-4 columns">
-        <p><img src="http://placehold.it/400x200&text=Look at me!" alt="image for article" alt="article preview image"></p>
-      </div>
-      <div class="large-8 columns">
-        <h5><a href="#">Interstellar Dust on the Galaxy's Magnetic Field | Space Wallpaper</a></h5>
-        <p>
-          <span><i class="fa fa-user"> By Thadeus &nbsp;&nbsp;</i></span>
-          <span><i class="fa fa-calendar"> 11/23/16 &nbsp;&nbsp;</i></span>
-          <span><i class="fa fa-share"></i> Share</span>
-        </p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae impedit beatae, ipsum delectus aperiam nesciunt magni facilis ullam.</p>
-      </div>
-    </div>
-
-    <hr>
-
-    <div class="row column">
-      <a class="button hollow expanded">Load More</a>
-    </div>
-
-    </article>
-
-  </div>
 
 </div>

@@ -1,8 +1,11 @@
+// Angular imports
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
 
+// App Components
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ArticlesComponent } from './articles/articles.component';
@@ -11,6 +14,21 @@ import { FooterComponent } from './footer/footer.component';
 import { SubscriptionComponent } from './articles/subscription/subscription.component';
 import { PieceComponent } from './articles/piece/piece.component';
 import { ContentControlComponent } from './articles/content-control/content-control.component';
+
+// App services
+import { PostsService } from './posts.service';
+
+const ROUTES = [
+  {
+    path: '',
+    redirectTo: 'posts',
+    pathMatch: 'full'
+  },
+  {
+    path: 'posts',
+    component: AppComponent
+  }
+];
 
 @NgModule({
   declarations: [
@@ -26,9 +44,10 @@ import { ContentControlComponent } from './articles/content-control/content-cont
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(ROUTES)
   ],
-  providers: [],
+  providers: [PostsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
