@@ -6,11 +6,12 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./piece.component.scss']
 })
 export class PieceComponent implements OnInit {
-  @Input() article: any;
+  @Input() article;
 
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }
