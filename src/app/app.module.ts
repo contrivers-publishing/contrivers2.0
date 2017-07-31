@@ -22,7 +22,7 @@ import { FullArticleComponent } from './full-article/full-article.component';
 const ROUTES = [
   {
     path: '',
-    component: AppComponent,
+    component: ArticlesComponent,
     pathMatch: 'full'
   },
   {
