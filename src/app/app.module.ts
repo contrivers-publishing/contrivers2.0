@@ -17,16 +17,17 @@ import { ContentControlComponent } from './articles/content-control/content-cont
 
 // App services
 import { PostsService } from './posts.service';
+import { FullArticleComponent } from './full-article/full-article.component';
 
 const ROUTES = [
   {
     path: '',
-    redirectTo: 'posts',
+    component: AppComponent,
     pathMatch: 'full'
   },
   {
-    path: 'posts',
-    component: AppComponent
+    path: 'article',
+    component: FullArticleComponent
   }
 ];
 
@@ -39,7 +40,8 @@ const ROUTES = [
     FooterComponent,
     SubscriptionComponent,
     PieceComponent,
-    ContentControlComponent
+    ContentControlComponent,
+    FullArticleComponent
   ],
   imports: [
     BrowserModule,

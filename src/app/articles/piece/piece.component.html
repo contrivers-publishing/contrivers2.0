@@ -1,15 +1,15 @@
 <div class="row">
-    <div class="large-4 columns">
-        <p><img src="http://placehold.it/400x200&text=Look at me!" alt="image for article" alt="article preview image"></p>
+    <div class="large-3 columns">
+        <p><img src={{article.image.url}} alt="image for article" style="max-height: 300px; "></p>
     </div>
-    <div class="large-8 columns">
+    <div class="large-9 columns">
         <h5><a href="#">{{ article.title }}</a></h5>
         <p>
             <span><i class="fa fa-user"> </i> By {{article.author.name.first}} {{article.author.name.last}} </span>
             <span><i class="fa fa-calendar"> </i> {{article.publishedDate | date}} </span>
             <span><i class="fa fa-share"> </i> Share</span>
         </p>
-        <p>{{article.content.abstract}}</p>
+        <div [innerHTML]="article.content.abstract"></div>
     </div>
 </div>
 
