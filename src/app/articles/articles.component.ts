@@ -9,11 +9,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./articles.component.scss']
 })
 export class ArticlesComponent implements OnInit {
-  articles: any = [];
+  articles: any;
 
-  constructor(private postsService: PostsService) { }
+  constructor(private postsService: PostsService) {
+    this.postsService = postsService;
+    console.log("articles constructor started")
+  }
 
   ngOnInit() {
-    this.articles = this.postsService.allArticles;
+    console.log("articles oninit started", this.articles)
+    this.articles = this.postsService.fetchArticles();
+    this.postsService.dataChanged.subscribe(
+      () => {
+        this.articles = this.postsService.allArticles;
+      }
+    );
   }
 }
