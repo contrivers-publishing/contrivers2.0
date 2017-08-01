@@ -18,11 +18,12 @@ import { ContentControlComponent } from './articles/content-control/content-cont
 // App services
 import { PostsService } from './posts.service';
 import { FullArticleComponent } from './full-article/full-article.component';
+import { MainPageComponent } from './main-page/main-page.component';
 
 const ROUTES = [
   {
     path: '',
-    component: ArticlesComponent,
+    component: MainPageComponent,
     pathMatch: 'full'
   },
   {
@@ -41,7 +42,8 @@ const ROUTES = [
     SubscriptionComponent,
     PieceComponent,
     ContentControlComponent,
-    FullArticleComponent
+    FullArticleComponent,
+    MainPageComponent
   ],
   imports: [
     BrowserModule,
