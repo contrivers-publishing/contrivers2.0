@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+/* Foundation Imports */
+
+
+/* @import url('../node_modules/foundation-sites/dist/css/foundation-float.min.css');
+@import url('../node_modules/foundation-sites/dist/css/foundation.min.css'); */
+
+
+/* Erika Imports */
+
+
+/* @import url('../src/assets/css/bootstrap.min.css');
+@import url('../src/assets/css/custom.css');
+@import url('../src/assets/css/responsive.css');
+@import url('../src/assets/css/themify-icons.css');
+@import url('../src/assets/style.css');
+@import url('../src/assets/css/elements.css');
+@import url('../node_modules/font-awesome/css/font-awesome.css'); */
+
+
+/* Font Imports */
+
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond|Playfair+Display');
