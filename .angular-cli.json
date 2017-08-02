@@ -21,6 +21,7 @@
             "styles.css"
         ],
         "scripts": [
+            "../node_modules/jquery/dist/jquery.min.js",
             "../src/assets/js/vendor/modernizr.min.js",
             "../src/assets/js/plugins.js",
             "../src/assets/js/main.js"
