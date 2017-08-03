@@ -1,19 +1,21 @@
 <article class="blog-post article-single blog-post-wrapper col-md-12 post type-post status-publish format-standard has-post-thumbnail hentry category-art tag-art">
     <aside>
         <figure>
-            <a href="http://seaboardthemes.com/flexzine/wp/kanye-west-is-reportedly-working-on-a-david-bowie-tribute-album/" title="{{ article.title }}" alt="39"></a>
+            <a href="http://seaboardthemes.com/flexzine/wp/kanye-west-is-reportedly-working-on-a-david-bowie-tribute-album/" title="{{ article.title }}">
+                <img width="495" height="356" src="{{ article.image.url }}" class="attachment-flexzine-medium-alt size-flexzine-medium-alt wp-post-image">
+            </a>
         </figure>
     </aside>
     <div class="contents">
         <header class="pt-0">
             <ul class="categories">
-                <li><a href="#" rel="category tag">BLAH</a></li>
+                <li><a href="#" rel="category tag">{{ article.contentType | uppercase }}</a></li>
             </ul>
             <h3><a href="#" target="_self">{{ article.title }}</a></h3>
             <div class="meta">
                 <span><time datetime="2016-07-19">{{article.publishedDate | date}}</time></span>
-                <span>105 Views</span>
-                <span><a href="#">0 Comment</a></span>
+                <!-- <span>105 Views</span>
+                <span><a href="#">0 Comment</a></span> -->
             </div>
             <!-- /meta -->
 
