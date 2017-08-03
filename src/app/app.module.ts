@@ -29,7 +29,7 @@ const ROUTES = [
     pathMatch: 'full'
   },
   {
-    path: 'article',
+    path: 'article/:slug',
     component: FullArticleComponent
   }
 ];

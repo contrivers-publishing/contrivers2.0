@@ -8,20 +8,14 @@ export class PostsService {
   allArticles;
   content;
   dataChanged = new Subject<void>();
+  articleChanged = new Subject<void>();
+  currentArticle;
 
   constructor(private http: Http) {
     this.http = http;
     console.log("post service constructor started");
     this.fetchArticles();
   }
-
-    // this.getAllArticles().subscribe(posts => {
-    //   this.allArticles = posts;
-
-    //   // this.reviews = posts.filter(post => post.contentType === "book review").slice();
-    //   // this.essays = posts.filter(post => post.contentType === "essay").slice();
-    //   // this.interviews = posts.filter(post => post.contentType === "interview").slice();
-    // });
 
   fetchArticles() {
     this.http.get('/api')
@@ -34,6 +28,21 @@ export class PostsService {
           console.log("I CANT SEE DATA HERE: ", this.allArticles);
           this.dataChanged.next();
           return this.allArticles;
+        }
+      );
+  }
+
+  getArticle(slug: string) {
+    this.http.get('/api/' + slug)
+      .map((response: Response) => {
+        return response.json();
+      })
+      .subscribe(
+        (data) => {
+          this.currentArticle = data;
+          console.log("I CANT SEE DATA HERE: ", this.currentArticle);
+          this.articleChanged.next();
+          return this.currentArticle;
         }
       );
   }

@@ -22,4 +22,19 @@ router.get('/', function(req, res) {
     });
 })
 
+router.get('/:slug', function(req, res) {
+    var locals = res.locals;
+    var slug = req.params.slug;
+    console.log("api got slug:", slug);
+
+    var q = keystone.list('Post').model.findOne({
+        state: 'published',
+        slug: slug,
+    }).populate('author');
+
+    q.exec(function(err, results) {
+        res.json(results);
+    });
+})
+
 exports = module.exports = router;
