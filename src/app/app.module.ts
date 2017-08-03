@@ -19,7 +19,8 @@ import { ContentControlComponent } from './articles/content-control/content-cont
 import { PostsService } from './posts.service';
 import { FullArticleComponent } from './full-article/full-article.component';
 import { MainPageComponent } from './main-page/main-page.component';
-import { StickNavComponent } from './stick-nav/stick-nav.component';
+import { StickNavComponent } from './sticky-nav/sticky-nav.component';
+import { HeadComponent } from './head/head.component';
 
 const ROUTES = [
   {
@@ -45,7 +46,8 @@ const ROUTES = [
     ContentControlComponent,
     FullArticleComponent,
     MainPageComponent,
-    StickNavComponent
+    StickNavComponent,
+    HeadComponent
   ],
   imports: [
     BrowserModule,
