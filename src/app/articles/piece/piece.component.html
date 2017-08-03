@@ -1,16 +1,41 @@
-<div class="row">
+<article class="blog-post article-single blog-post-wrapper col-md-12 post type-post status-publish format-standard has-post-thumbnail hentry category-art tag-art">
+    <aside>
+        <figure>
+            <a href="http://seaboardthemes.com/flexzine/wp/kanye-west-is-reportedly-working-on-a-david-bowie-tribute-album/" title="{{ article.title }}" alt="39"></a>
+        </figure>
+    </aside>
+    <div class="contents">
+        <header class="pt-0">
+            <ul class="categories">
+                <li><a href="#" rel="category tag">BLAH</a></li>
+            </ul>
+            <h3><a href="#" target="_self">{{ article.title }}</a></h3>
+            <div class="meta">
+                <span><time datetime="2016-07-19">{{article.publishedDate | date}}</time></span>
+                <span>105 Views</span>
+                <span><a href="#">0 Comment</a></span>
+            </div>
+            <!-- /meta -->
+
+        </header>
+        <div class="post-content" [innerHTML]="article.content.abstract"></div>
+        <!-- /post-content -->
+    </div>
+</article>
+
+<!-- <div class="row">
     <div class="large-2 medium-3 columns">
         <img src={{article.image.url}} alt="image for article" style="max-height: 200px; ">
     </div>
     <div class="large-10 medium-9 columns">
-        <h5><a href="#">{{ article.title }}</a></h5>
+        <h5><a href="#"></a></h5>
         <p>
             <span><i class="fa fa-user"> </i> By {{article.author.name.first}} {{article.author.name.last}} </span>
-            <span><i class="fa fa-calendar"> </i> {{article.publishedDate | date}} </span>
+            <span><i class="fa fa-calendar"> </i>  </span>
             <span><i class="fa fa-share"> </i> Share</span>
         </p>
-        <div [innerHTML]="article.content.abstract"></div>
+
     </div>
 </div>
 <hr>
-<app-subscription *ngIf="num===2"></app-subscription>
+<app-subscription *ngIf="num===2"></app-subscription> -->
