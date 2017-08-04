@@ -8,54 +8,31 @@
                         <header>
                             <h3><a href="http://seaboardthemes.com/flexzine/wp/tom-sachs-brings-boombox-culture-back-to-the-brooklyn-museum/">{{ article.title }}</a></h3>
                             <div class="meta">
-                                <span><time datetime="2016-07-21">July 21, 2016</time></span>
-                                <span>796 Views</span>
-                                <span><a href="#">0 Comment</a></span>
+                                <span>By: {{article.author.name.first}} {{article.author.name.last}}</span>
+                                <span><time>Published: {{article.publishedDate | date}}</time></span>
+                                <span>Tags: {{ article.tags.join(", ") }}</span>
                             </div>
                             <!-- /meta -->
-
-
                             <figure>
-                                <a href="http://seaboardthemes.com/flexzine/wp/tom-sachs-brings-boombox-culture-back-to-the-brooklyn-museum/" title="Tom Sachs Brings Boombox Culture Back to the Brooklyn Museum"><img width="1080" height="720" src="http://seaboardthemes.com/flexzine/wp/wp-content/uploads/2016/07/15.jpg" class="attachment-full size-full wp-post-image" alt="15"></a>
+                                <a href="#" title="{{ article.title }}">
+                                    <img src="{{ article.image.url }}" class="attachment-full size-full wp-post-image">
+                                </a>
                             </figure>
                         </header>
 
-                        <div class="post-content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In cursus nibh et congue aliquam. Fusce ipsum tellus, pellentesque a consequat eget, luctus eget nisi. Maecenas tellus elit, mattis eget luctus vitae, mollis quis metus.
-                                Ut quis turpis vel quam varius eleifend id id augue. Vestibulum eu arcu feugiat, sodales orci ut, dictum mauris.</p>
-                            <h4>Lorem Ipsum Dolor</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur <a href="#">adipiscing</a> elit. In cursus nibh et congue aliquam. Fusce ipsum tellus, pellentesque a consequat eget, luctus eget nisi. Maecenas tellus elit, mattis eget luctus vitae,
-                                mollis quis metus. Ut quis turpis vel quam varius eleifend id id augue. Vestibulum eu arcu feugiat, sodales orci ut, dictum mauris. Aenean tempus ipsum at nibh tempor feugiat. Nam aliquet velit sit amet cursus et ultricies.
-                                Vestibulum ante ipsum primis in faucibus efficitur turpis.</p>
-                            <blockquote>
-                                <p>Fusce pellentesque, leo nec dignissim condimentum, leo dui elementum felis, sit amet sodales velit est vitae sapien.</p>
-                            </blockquote>
-                            <p>Vivamus gravida, eros nec volutpat aliquam, neque lacus mollis dolor, nec pretium mauris ante vitae risus. Duis rutrum odio vel accumsan imperdiet. Nulla ac posuere lacus. Quisque sed ipsum vel nisl gravida vulputate. Sed pretium
-                                non magna malesuada convallis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sodales porta gravida. Fusce pellentesque, leo nec dignissim condimentum, leo dui elementum felis, sit amet sodales velit est vitae
-                                sapien. Sed blandit tellus vel nisl porta ultricies. Sed at erat at dolor maximus suscipit vitae ut lacus. In bibendum ullamcorper feugiat. Maecenas enim felis, fermentum non ultrices at, pellentesque ut ipsum.</p>
-                        </div>
+                        <div class="post-content" [innerHTML]="article.content.extended"></div>
                         <!-- /post-content -->
 
-                        <div class="post-share clearfix">
-                            <!-- <p class="counter"><span>53</span>Shares</p> -->
-                            <ul class="social-icons style2">
-                                <li><a href="https://www.facebook.com/sharer/sharer.php?u=http://seaboardthemes.com/flexzine/wp/tom-sachs-brings-boombox-culture-back-to-the-brooklyn-museum/"><i class="fa fa-facebook"></i>Like</a></li>
-                                <li><a href="https://twitter.com/home?status=http://seaboardthemes.com/flexzine/wp/tom-sachs-brings-boombox-culture-back-to-the-brooklyn-museum/"><i class="fa fa-twitter"></i>Tweet</a></li>
-                                <li><a href="http://www.reddit.com/submit?url=http://seaboardthemes.com/flexzine/wp/tom-sachs-brings-boombox-culture-back-to-the-brooklyn-museum/&amp;title="><i class="fa fa-reddit"></i>Submit</a></li>
-                                <li>
-                                    <a href="https://pinterest.com/pin/create/button/?url=&amp;media=http://seaboardthemes.com/flexzine/wp/wp-content/uploads/2016/07/15-735x720.jpg&amp;description=Tom+Sachs+Brings+Boombox+Culture+Back+to+the+Brooklyn+Museum"><i class="fa fa-pinterest"></i>Pin It</a>
-                                </li>
-                                <li><a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://seaboardthemes.com/flexzine/wp/tom-sachs-brings-boombox-culture-back-to-the-brooklyn-museum/&amp;title=&amp;summary=&amp;source="><i class="fa fa-linkedin"></i>Linkedin</a></li>
-                                <li><a href="http://digg.com/submit?url=http://seaboardthemes.com/flexzine/wp/tom-sachs-brings-boombox-culture-back-to-the-brooklyn-museum/&amp;title="><i class="fa fa-link"></i>Digg</a></li>
-                            </ul>
-                        </div>
-                        <!-- /post-share -->
+                        <app-social-icons></app-social-icons>
 
                         <div class="post-meta">
-                            <p class="author">By: <a href="#">Author</a></p>
+                            <p class="author">By: <a href="#">{{ article.author.name.first }} {{ article.author.name.last }}</a></p>
                             <div class="post-tags">
-                                Tags: <a href="http://seaboardthemes.com/flexzine/wp/tag/featured/" rel="tag">featured</a>, <a href="http://seaboardthemes.com/flexzine/wp/tag/food/" rel="tag">food</a>, <a href="http://seaboardthemes.com/flexzine/wp/tag/hot/"
-                                    rel="tag">hot</a> </div>
+                                <ul>
+                                    Tags:
+                                    <li *ngFor="let tag of article.tags"><a href="#"> &nbsp;{{ tag }}</a></li>
+                                </ul>
+                            </div>
                             <!-- /post-tags -->
                         </div>
                         <!-- /post-meta -->
@@ -65,10 +42,8 @@
                                 <img alt="" src="http://2.gravatar.com/avatar/29e43607c06fb317e13c09a8a67e3532?s=90&amp;d=mm&amp;r=g" srcset="http://2.gravatar.com/avatar/29e43607c06fb317e13c09a8a67e3532?s=180&amp;d=mm&amp;r=g 2x" class="media-object img-responsive img-circle avatar-90 photo"
                                     height="90" width="90"> </figure>
                             <div class="author-details">
-                                <h2>Author</h2>
-                                <p>
-                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolore laudantium, totam rem aperiam. </p>
-
+                                <h2>{{ article.author.name.first }} {{ article.author.name.last }}</h2>
+                                <p [innerHTML]="article.author.bio"></p>
                                 <ul class="social-icons small">
                                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -77,7 +52,6 @@
                                     <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
                                     <li><a href="#"><i class="fa fa-envelope-o"></i></a></li>
                                 </ul>
-
                             </div>
                             <!-- /author-details -->
                         </div>
@@ -87,7 +61,7 @@
                         <div class="related-posts">
                             <h6>YOU MIGHT ALSO LIKE</h6>
                             <div class="row">
-                                <article class="blog-post col-md-4 post-377 post type-post status-publish format-standard has-post-thumbnail hentry category-lifestyle tag-featured tag-hot tag-lifestyle">
+                                <article class="blog-post col-md-4 post type-post status-publish format-standard has-post-thumbnail hentry category-lifestyle tag-featured tag-hot tag-lifestyle">
                                     <header>
                                         <figure>
                                             <a href="http://seaboardthemes.com/flexzine/wp/dekmantel-patta-re-team-for-2016-summer/" title="Dekmantel &amp; Patta Re-Team for 2016 Summer"><img width="495" height="356" src="http://seaboardthemes.com/flexzine/wp/wp-content/uploads/2016/07/38-495x356.jpg" class="attachment-flexzine-medium-alt size-flexzine-medium-alt wp-post-image" alt="38"></a>
@@ -100,7 +74,7 @@
                                         <!-- /meta -->
                                     </header>
                                 </article>
-                                <article class="blog-post col-md-4 post-369 post type-post status-publish format-standard has-post-thumbnail hentry category-lifestyle tag-featured tag-hot tag-lifestyle">
+                                <article class="blog-post col-md-4 post type-post status-publish format-standard has-post-thumbnail hentry category-lifestyle tag-featured tag-hot tag-lifestyle">
                                     <header>
                                         <figure>
                                             <a href="http://seaboardthemes.com/flexzine/wp/the-evolution-of-her-signature-line-with-urban-outfitters/" title="The Evolution of Her Signature Line With Urban Outfitters"><img width="495" height="356" src="http://seaboardthemes.com/flexzine/wp/wp-content/uploads/2016/07/5-495x356.jpg" class="attachment-flexzine-medium-alt size-flexzine-medium-alt wp-post-image" alt="5"></a>
@@ -113,7 +87,7 @@
                                         <!-- /meta -->
                                     </header>
                                 </article>
-                                <article class="blog-post col-md-4 post-399 post type-post status-publish format-standard has-post-thumbnail hentry category-fashion tag-fashion tag-featured">
+                                <article class="blog-post col-md-4 post type-post status-publish format-standard has-post-thumbnail hentry category-fashion tag-fashion tag-featured">
                                     <header>
                                         <figure>
                                             <a href="http://seaboardthemes.com/flexzine/wp/heres-what-you-need-to-know-about-collaborations-in-fashion/" title="Here's What You Need to Know About Collaborations in Fashion"><img width="495" height="356" src="http://seaboardthemes.com/flexzine/wp/wp-content/uploads/2016/07/43-495x356.jpg" class="attachment-flexzine-medium-alt size-flexzine-medium-alt wp-post-image" alt="43"></a>

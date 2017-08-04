@@ -21,6 +21,8 @@ import { FullArticleComponent } from './full-article/full-article.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { StickNavComponent } from './sticky-nav/sticky-nav.component';
 import { HeadComponent } from './head/head.component';
+import { SocialIconsComponent } from './full-article/social-icons/social-icons.component';
+import { CommentsComponent } from './full-article/comments/comments.component';
 
 const ROUTES = [
   {
@@ -47,7 +49,9 @@ const ROUTES = [
     FullArticleComponent,
     MainPageComponent,
     StickNavComponent,
-    HeadComponent
+    HeadComponent,
+    SocialIconsComponent,
+    CommentsComponent
   ],
   imports: [
     BrowserModule,
