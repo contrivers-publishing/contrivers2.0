@@ -22,6 +22,17 @@ router.get('/', function(req, res) {
     });
 })
 
+router.get('/featured', function(req, res) {
+    var q = keystone.list('Post').model.find({
+        state: 'published',
+        featured: true
+    }).populate('author');
+
+    q.exec(function(err, results) {
+        res.json(results);
+    });
+})
+
 router.get('/:slug', function(req, res) {
     var locals = res.locals;
     var slug = req.params.slug;
@@ -36,5 +47,7 @@ router.get('/:slug', function(req, res) {
         res.json(results);
     });
 })
+
+
 
 exports = module.exports = router;

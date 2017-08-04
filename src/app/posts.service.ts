@@ -6,15 +6,17 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class PostsService {
   allArticles;
-  content;
   dataChanged = new Subject<void>();
-  articleChanged = new Subject<void>();
   currentArticle;
+  articleChanged = new Subject<void>();
+  featuredArticles;
+  featuredChanged = new Subject<void>();
 
   constructor(private http: Http) {
     this.http = http;
-    console.log("post service constructor started");
+    console.log('post service constructor started');
     this.fetchArticles();
+
   }
 
   fetchArticles() {
@@ -25,7 +27,7 @@ export class PostsService {
       .subscribe(
         (data) => {
           this.allArticles = data;
-          console.log("I CANT SEE DATA HERE: ", this.allArticles);
+          console.log('I CANT SEE ALL ARTICLES HERE: ', this.allArticles);
           this.dataChanged.next();
           return this.allArticles;
         }
@@ -40,9 +42,24 @@ export class PostsService {
       .subscribe(
         (data) => {
           this.currentArticle = data;
-          console.log("I CANT SEE DATA HERE: ", this.currentArticle);
+          console.log('I CANT SEE CURRENT ARTICLES HERE: ', this.currentArticle);
           this.articleChanged.next();
           return this.currentArticle;
+        }
+      );
+  }
+
+  getFeatured() {
+    this.http.get('/api/featured')
+      .map((response: Response) => {
+        return response.json();
+      })
+      .subscribe(
+        (data) => {
+          this.featuredArticles = data;
+          console.log('I CANT SEE FEATURED ARTICLES HERE: ', this.featuredArticles);
+          this.featuredChanged.next();
+          return this.allArticles;
         }
       );
   }
