@@ -7,6 +7,33 @@ ul {
     list-style: none;
 }
 
+p {
+    margin: 0 0 0 0;
+}
+
+li>a {
+    padding: 10px;
+}
+
+.nav-pills {
+    margin: 10px;
+}
+
+div.tab-content {
+    padding: 10px;
+}
+
+.nav-pills>li>a {
+    border-radius: 0px;
+    background-color: transparent;
+    border-color: #f5f5f5;
+}
+
+.nav-pills>li.active>a {
+    background-color: #333;
+    color: #aaa;
+}
+
 
 /*-----------------------------------------
   29. Accordion
