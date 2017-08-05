@@ -6,7 +6,7 @@
 
                     <article class="blog-post col-md-12">
                         <header>
-                            <h3><a href="http://seaboardthemes.com/flexzine/wp/tom-sachs-brings-boombox-culture-back-to-the-brooklyn-museum/">{{ article.title }}</a></h3>
+                            <h3><a routerLink="/article/{{ article.slug }}">{{ article.title }}</a></h3>
                             <div class="meta">
                                 <span>By: {{article.author.name.first}} {{article.author.name.last}}</span>
                                 <span><time>Published: {{article.publishedDate | date}}</time></span>
@@ -56,7 +56,7 @@
                         <!-- /post-author -->
 
 
-                        <div class="related-posts">
+                        <!-- <div class="related-posts">
                             <h6>YOU MIGHT ALSO LIKE</h6>
                             <div class="row">
                                 <article class="blog-post col-md-4 post type-post status-publish format-standard has-post-thumbnail hentry category-lifestyle tag-featured tag-hot tag-lifestyle">
@@ -69,7 +69,7 @@
                                             <span><a href="http://seaboardthemes.com/flexzine/wp/category/lifestyle/" rel="category tag">Lifestyle</a></span>
                                             <span><time datetime="2016-07-21">July 21, 2016</time></span>
                                         </div>
-                                        <!-- /meta -->
+                                        <!-- /meta --
                                     </header>
                                 </article>
                                 <article class="blog-post col-md-4 post type-post status-publish format-standard has-post-thumbnail hentry category-lifestyle tag-featured tag-hot tag-lifestyle">
@@ -82,7 +82,7 @@
                                             <span><a href="http://seaboardthemes.com/flexzine/wp/category/lifestyle/" rel="category tag">Lifestyle</a></span>
                                             <span><time datetime="2016-07-21">July 21, 2016</time></span>
                                         </div>
-                                        <!-- /meta -->
+                                        <!-- /meta --
                                     </header>
                                 </article>
                                 <article class="blog-post col-md-4 post type-post status-publish format-standard has-post-thumbnail hentry category-fashion tag-fashion tag-featured">
@@ -95,12 +95,12 @@
                                             <span><a href="http://seaboardthemes.com/flexzine/wp/category/fashion/" rel="category tag">Fashion</a></span>
                                             <span><time datetime="2016-07-21">July 21, 2016</time></span>
                                         </div>
-                                        <!-- /meta -->
+                                        <!-- /meta --
                                     </header>
                                 </article>
                             </div>
-                            <!-- /row -->
-                        </div>
+                            <!-- /row --
+                        </div> -->
                         <!-- /related-posts -->
                     </article>
                 </div>
