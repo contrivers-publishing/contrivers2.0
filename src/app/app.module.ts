@@ -23,6 +23,7 @@ import { StickNavComponent } from './sticky-nav/sticky-nav.component';
 import { HeadComponent } from './head/head.component';
 import { SocialIconsComponent } from './full-article/social-icons/social-icons.component';
 import { CommentsComponent } from './full-article/comments/comments.component';
+import { FootnotesComponent } from './full-article/footnotes/footnotes.component';
 
 const ROUTES = [
   {
@@ -51,7 +52,8 @@ const ROUTES = [
     StickNavComponent,
     HeadComponent,
     SocialIconsComponent,
-    CommentsComponent
+    CommentsComponent,
+    FootnotesComponent
   ],
   imports: [
     BrowserModule,

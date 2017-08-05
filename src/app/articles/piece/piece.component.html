@@ -9,9 +9,9 @@
     <div class="contents">
         <header class="pt-0">
             <ul class="categories">
-                <li><a href="#" rel="category tag">{{ article.contentType | uppercase }}</a></li>
+                <li><a routerLink="/article/{{article.slug}}" rel="category tag">{{ article.contentType | uppercase }}</a></li>
             </ul>
-            <h3><a href="#" target="_self">{{ article.title }}</a></h3>
+            <h3><a routerLink="/article/{{article.slug}}" target="_self">{{ article.title }}</a></h3>
             <div class="meta">
                 <span>By: {{article.author.name.first}} {{article.author.name.last}}</span>
                 <span><time>Published: {{article.publishedDate | date}}</time></span>
