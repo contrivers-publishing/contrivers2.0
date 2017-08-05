@@ -59,7 +59,7 @@ export class PostsService {
           this.featuredArticles = data;
           console.log('I CANT SEE FEATURED ARTICLES HERE: ', this.featuredArticles);
           this.featuredChanged.next();
-          return this.allArticles;
+          return this.featuredArticles;
         }
       );
   }

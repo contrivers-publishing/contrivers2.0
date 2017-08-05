@@ -1,0 +1,11 @@
+img.crop {
+    width: 290px;
+    height: 245px;
+    object-fit: cover
+}
+
+img.featured {
+    width: 720px;
+    height: 500px;
+    object-fit: cover
+}
