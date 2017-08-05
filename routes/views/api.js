@@ -15,7 +15,7 @@ router.get('/', function(req, res) {
     };
 
     var q = keystone.list('Post').model.find().where('state', 'published')
-        .sort('-publishedDate').populate('author');
+        .sort('-publishedDate').populate('author categories');
 
     q.exec(function(err, results) {
         res.json(results);
@@ -26,7 +26,7 @@ router.get('/featured', function(req, res) {
     var q = keystone.list('Post').model.find({
         state: 'published',
         featured: true
-    }).populate('author');
+    }).sort('-publishedDate').populate('author categories');
 
     q.exec(function(err, results) {
         res.json(results);
@@ -41,13 +41,11 @@ router.get('/:slug', function(req, res) {
     var q = keystone.list('Post').model.findOne({
         state: 'published',
         slug: slug,
-    }).populate('author');
+    }).sort('-publishedDate').populate('author categories');
 
     q.exec(function(err, results) {
         res.json(results);
     });
 })
-
-
 
 exports = module.exports = router;
