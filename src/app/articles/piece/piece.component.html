@@ -2,7 +2,7 @@
     <aside>
         <figure>
             <a routerLink="/article/{{article.slug}}" title="{{ article.title }}">
-                <img width="495" height="356" src="{{ article.image.url }}" class="attachment-flexzine-medium-alt size-flexzine-medium-alt wp-post-image">
+                <img [src]="'http://res.cloudinary.com/dpsbqi721/image/upload/h_300,c_scale/' + article.image.public_id + '.' + article.image.format" class="attachment-flexzine-medium-alt size-flexzine-medium-alt wp-post-image">
             </a>
         </figure>
     </aside>
