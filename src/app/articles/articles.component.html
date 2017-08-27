@@ -13,11 +13,11 @@
     <div id="latest-posts" class="tab-contents active">
         <div class="contents-inner latest-post-container list-view clearfix">
             <!--latest post query goes here-->
-            <app-piece *ngFor="let article of articles" [article]='article'></app-piece>
+            <app-piece *ngFor="let article of articles | slice:0:limit" [article]='article'></app-piece>
         </div>
         <!-- /contenblog-popular-poststs-inner -->
         <div class="blog-navigation clearfix">
-            <a href="http://seaboardthemes.com/flexzine/wp/list-full-width/page/2/" id="blog-load-more" data-loading-text="Loading.." class="ajax-load-more">Load More</a>
+            <a id="blog-load-more" class="ajax-load-more" (click)="viewMore()">Load More</a>
         </div>
         <!-- /blog-navigation -->
     </div>
