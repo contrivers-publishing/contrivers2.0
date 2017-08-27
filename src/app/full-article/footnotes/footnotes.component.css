@@ -20,7 +20,7 @@ li {
 li>a {
     display: inline-block;
     padding: 6px 15px;
-    border: 2px solid #cccccc;
+    border: 1px solid #cccccc;
     font-size: 11px;
     background-color: transparent;
     margin: auto;

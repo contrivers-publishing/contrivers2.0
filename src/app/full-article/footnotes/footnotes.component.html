@@ -11,8 +11,6 @@
 <!-- Pill panes -->
 <div class="tab-content col-md-12">
     <div *ngFor="let note of footnotes; let i=index" role="tabpanel" class="tab-pane" id="note{{i+1}}">
-        <ul [innerHTML]="note || '<em>Click note above to display</em>'">
-            <em>Click note above to display</em>
-        </ul>
+        <ul [innerHTML]="note || '<em>Click note above to display</em>'"></ul>
     </div>
 </div>
