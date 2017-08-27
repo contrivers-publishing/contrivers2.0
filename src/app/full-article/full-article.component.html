@@ -21,7 +21,7 @@
                         <div class="post-content" [innerHTML]="article.content.extended"></div>
                         <!-- /post-content -->
 
-                        <div class="post-content" app-footnotes [footnotes]="article.footnotes"></div>
+                        <div *ngIf="article.footnotes.length > 0" class="post-content" app-footnotes [footnotes]="article.footnotes"></div>
 
                         <hr>
 
