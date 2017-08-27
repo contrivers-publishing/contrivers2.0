@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-footnotes',
+  selector: '[app-footnotes]',
   templateUrl: './footnotes.component.html',
   styleUrls: ['./footnotes.component.css']
 })
