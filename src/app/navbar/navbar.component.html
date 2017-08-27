@@ -18,14 +18,12 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="top-menu">
-                    <a href="#" class="top-nav-trigger">
+                    <a href="#" class="top-nav-trigger" (click)="onShowMenu()">
                         <span class="bars">
-                                    <span></span>
-                        <span></span>
-                        <span></span>
+                          <span></span><span></span><span></span>
                         </span>
                     </a>
-                    <ul class="top-nav">
+                    <ul class="top-nav" [ngStyle]="{'display': displayType}">
                         <li id="menu-item-155" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-155"><a href="http://seaboardthemes.com/flexzine/wp/about/">About</a></li>
                         <li id="menu-item-156" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-156"><a href="http://seaboardthemes.com/flexzine/wp/contact/">Contact</a></li>
                         <li id="menu-item-157" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-157"><a href="http://seaboardthemes.com/flexzine/wp/options/">Options</a></li>
@@ -188,8 +186,8 @@
                             <a href="http://seaboardthemes.com/flexzine/wp/category/food/">Food</a>
                         </li>
                     </ul>
-                    <div class="search-container">
-                        <a href="#" class="trigger">
+                    <div class="search-container" [ngClass]="{'form-is-showing': isFormShown}">
+                        <a href="#" class="trigger" (click)="onShowForm()">
                             <i class="fa fa-search"></i>
                         </a>
                         <form id="signup_form" method="get" class="search-form" action="#">
