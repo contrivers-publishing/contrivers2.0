@@ -17,8 +17,8 @@ export class StickNavComponent implements OnInit {
     @HostListener("window:scroll", [])
     onWindowScroll() {
       let number = this.document.body.scrollTop;
-      console.log("scrollTop is", number);
-      console.log("main nav info is", this.document.querySelector("main-nav"));
+      // console.log("scrollTop is", number);
+      // console.log("main nav info is", this.document.querySelector("main-nav"));
       if (number > 1000) {
         this.navIsFixed = true;
       } else if (this.navIsFixed && number < 10) {
