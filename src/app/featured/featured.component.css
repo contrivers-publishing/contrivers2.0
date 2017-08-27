@@ -1,11 +1,13 @@
 img.crop {
     width: 290px;
     height: 245px;
-    object-fit: cover
+    object-fit: cover;
+    max-width: 100%;
 }
 
 img.featured {
     width: 720px;
     height: 500px;
-    object-fit: cover
+    object-fit: cover;
+    max-width: 100%;
 }
