@@ -8,7 +8,7 @@ import { DOCUMENT } from '@angular/common';
 })
 export class StickNavComponent implements OnInit {
 
-  public navIsFixed: boolean = false;
+  public navIsFixed = false;
 
     constructor(@Inject(DOCUMENT) private document: Document) { }
 

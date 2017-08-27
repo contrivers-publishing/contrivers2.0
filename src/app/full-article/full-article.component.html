@@ -21,6 +21,10 @@
                         <div class="post-content" [innerHTML]="article.content.extended"></div>
                         <!-- /post-content -->
 
+                        <div class="post-content" app-footnotes [footnotes]="article.footnotes"></div>
+
+                        <hr>
+
                         <app-social-icons></app-social-icons>
 
                         <div class="post-meta">
@@ -55,7 +59,7 @@
                         </div>
                         <!-- /post-author -->
 
-                        <app-footnotes [footnotes]="article.footnotes"></app-footnotes>
+
 
                         <!-- <div class="related-posts">
                             <h6>YOU MIGHT ALSO LIKE</h6>
