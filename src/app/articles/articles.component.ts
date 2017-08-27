@@ -10,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArticlesComponent implements OnInit {
   articles: any;
+  limit = 5;
 
   constructor(private postsService: PostsService) {
     this.postsService = postsService;
@@ -24,5 +25,9 @@ export class ArticlesComponent implements OnInit {
         this.articles = this.postsService.allArticles;
       }
     );
+  }
+
+  viewMore() {
+    this.limit = this.limit + 5;
   }
 }
