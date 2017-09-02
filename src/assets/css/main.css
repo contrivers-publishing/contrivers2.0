@@ -4287,7 +4287,7 @@ blockquote p {
 @media screen and (min-width: 992px) {
     .main-nav .mobile-nav-trigger,
     .top-menu .top-nav-trigger {
-        display: none;
+        display: inline-block;
     }
     .main-nav .main-nav-items {
         display: inline-block !important;
