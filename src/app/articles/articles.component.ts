@@ -4,13 +4,15 @@ import { Component, OnInit } from '@angular/core';
 // import { keystone } from 'keystone';
 
 @Component({
-  selector: 'app-articles',
+  selector: '[app-articles]',
   templateUrl: './articles.component.html',
   styleUrls: ['./articles.component.css']
 })
 export class ArticlesComponent implements OnInit {
   articles: any;
   limit = 5;
+  isFormShown: Boolean = false;
+  displayType: String = 'none';
 
   constructor(private postsService: PostsService) {
     this.postsService = postsService;
@@ -29,5 +31,18 @@ export class ArticlesComponent implements OnInit {
 
   viewMore() {
     this.limit = this.limit + 5;
+  }
+
+  onShowForm() {
+    console.log("button clicked", this.isFormShown);
+    this.isFormShown = !this.isFormShown;
+  }
+
+  onShowMenu() {
+    if(this.displayType === 'none') {
+      this.displayType = 'block';
+    } else {
+      this.displayType = 'none';
+    }
   }
 }

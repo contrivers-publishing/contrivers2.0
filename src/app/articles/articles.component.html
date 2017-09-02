@@ -1,26 +1,30 @@
-<app-featured></app-featured>
+<div class="blog-tabs clearfix">
+    <h5>Latest Stories
+        <a class="trigger" (click)="onShowForm()">
+            <i class="fa fa-search"></i>
+        </a>
+    </h5>
+    <div class="search-container" [ngClass]="{'form-is-showing': isFormShown}">
+        <form id="signup_form" method="get" class="search-form" action="#">
+            <div class="input_var">
+                <input class="search-field" type="search" id="s" name="s" placeholder="Search...">
+            </div>
+        </form>
+    </div>
+</div>
 
-<div class="col-md-12">
-    <div class="customAd-container">
-        <a href="#" target="_blank"><img src="http://seaboardthemes.com/flexzine/wp/wp-content/uploads/2016/07/banner-2.jpg" alt=""></a>
+<!-- /search-container -->
+
+<!-- /page-titlebar -->
+<div id="latest-posts" class="tab-contents active">
+    <div class="contents-inner latest-post-container list-view clearfix">
+        <!--latest post query goes here-->
+        <app-piece *ngFor="let article of articles | slice:0:limit" [article]='article'></app-piece>
     </div>
+    <!-- /contenblog-popular-poststs-inner -->
+    <div class="blog-navigation clearfix">
+        <a id="blog-load-more" class="ajax-load-more" (click)="viewMore()">Load More</a>
+    </div>
+    <!-- /blog-navigation -->
 </div>
-<div class="col-md-12">
-    <div class="blog-tabs clearfix">
-        <h5>Latest Stories</h5>
-    </div>
-    <!-- /page-titlebar -->
-    <div id="latest-posts" class="tab-contents active">
-        <div class="contents-inner latest-post-container list-view clearfix">
-            <!--latest post query goes here-->
-            <app-piece *ngFor="let article of articles | slice:0:limit" [article]='article'></app-piece>
-        </div>
-        <!-- /contenblog-popular-poststs-inner -->
-        <div class="blog-navigation clearfix">
-            <a id="blog-load-more" class="ajax-load-more" (click)="viewMore()">Load More</a>
-        </div>
-        <!-- /blog-navigation -->
-    </div>
-    <!-- /blog-latest-posts -->
-</div>
-<!-- /col-md-8 -->
+<!-- /blog-latest-posts -->
