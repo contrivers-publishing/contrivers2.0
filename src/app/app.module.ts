@@ -24,6 +24,7 @@ import { HeadComponent } from './head/head.component';
 import { SocialIconsComponent } from './full-article/social-icons/social-icons.component';
 import { CommentsComponent } from './full-article/comments/comments.component';
 import { FootnotesComponent } from './full-article/footnotes/footnotes.component';
+import { MainNavComponent } from './main-nav/main-nav.component';
 
 const ROUTES = [
   {
@@ -53,7 +54,8 @@ const ROUTES = [
     HeadComponent,
     SocialIconsComponent,
     CommentsComponent,
-    FootnotesComponent
+    FootnotesComponent,
+    MainNavComponent
   ],
   imports: [
     BrowserModule,
