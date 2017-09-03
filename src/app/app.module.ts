@@ -14,9 +14,6 @@ import { FooterComponent } from './footer/footer.component';
 import { SubscriptionComponent } from './articles/subscription/subscription.component';
 import { PieceComponent } from './articles/piece/piece.component';
 import { ContentControlComponent } from './articles/content-control/content-control.component';
-
-// App services
-import { PostsService } from './posts.service';
 import { FullArticleComponent } from './full-article/full-article.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { StickNavComponent } from './sticky-nav/sticky-nav.component';
@@ -25,6 +22,12 @@ import { SocialIconsComponent } from './full-article/social-icons/social-icons.c
 import { CommentsComponent } from './full-article/comments/comments.component';
 import { FootnotesComponent } from './full-article/footnotes/footnotes.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
+
+// App services
+import { PostsService } from './posts.service';
+
+// App Pipes
+import { FilterPipe } from './filter.pipe';
 
 const ROUTES = [
   {
@@ -55,7 +58,8 @@ const ROUTES = [
     SocialIconsComponent,
     CommentsComponent,
     FootnotesComponent,
-    MainNavComponent
+    MainNavComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

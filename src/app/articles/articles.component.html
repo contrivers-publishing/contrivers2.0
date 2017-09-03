@@ -7,7 +7,7 @@
     <div class="search-container" [ngClass]="{'form-is-showing': isFormShown}">
         <form id="signup_form" method="get" class="search-form" action="#">
             <div class="input_var">
-                <input class="search-field" type="search" id="s" name="s" placeholder="Search...">
+                <input [(ngModel)]="searchText" class="search-field" type="search" id="s" name="s" placeholder="Search...">
             </div>
         </form>
     </div>
@@ -19,7 +19,7 @@
 <div id="latest-posts" class="tab-contents active">
     <div class="contents-inner latest-post-container list-view clearfix">
         <!--latest post query goes here-->
-        <app-piece *ngFor="let article of articles | slice:0:limit" [article]='article'></app-piece>
+        <app-piece *ngFor="let article of articles | filter:searchText | slice:0:limit" [article]='article'></app-piece>
     </div>
     <!-- /contenblog-popular-poststs-inner -->
     <div class="blog-navigation clearfix">
