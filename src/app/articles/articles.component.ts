@@ -14,11 +14,9 @@ export class ArticlesComponent implements OnInit {
 
   constructor(private postsService: PostsService) {
     this.postsService = postsService;
-    console.log("articles constructor started")
   }
 
   ngOnInit() {
-    console.log("articles oninit started", this.articles)
     this.articles = this.postsService.fetchArticles();
     this.postsService.dataChanged.subscribe(
       () => {
@@ -32,7 +30,6 @@ export class ArticlesComponent implements OnInit {
   }
 
   onShowForm() {
-    console.log("button clicked", this.isFormShown);
     this.isFormShown = !this.isFormShown;
   }
 

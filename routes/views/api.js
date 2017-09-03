@@ -4,7 +4,6 @@ var router = express.Router();
 
 router.get('/', function(req, res) {
     var locals = res.locals;
-    console.log('test', req.params.article);
 
     // Set locals
     locals.filters = {
@@ -36,7 +35,6 @@ router.get('/featured', function(req, res) {
 router.get('/:slug', function(req, res) {
     var locals = res.locals;
     var slug = req.params.slug;
-    console.log("api got slug:", slug);
 
     var q = keystone.list('Post').model.findOne({
         state: 'published',

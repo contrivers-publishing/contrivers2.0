@@ -6,7 +6,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class FilterPipe implements PipeTransform  {
   transform(value: Array<Object>, filterText: string) {
     if (!filterText) {
-      console.log('There is no filter text provided');
       return value;
     }
     const resultArray = [];

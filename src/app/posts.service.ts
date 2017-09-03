@@ -14,7 +14,6 @@ export class PostsService {
 
   constructor(private http: Http) {
     this.http = http;
-    console.log('post service constructor started');
     this.fetchArticles();
   }
 
@@ -26,7 +25,6 @@ export class PostsService {
       .subscribe(
         (data) => {
           this.allArticles = data;
-          console.log('I CANT SEE ALL ARTICLES HERE: ', this.allArticles);
           this.dataChanged.next();
           return this.allArticles;
         }
@@ -41,7 +39,6 @@ export class PostsService {
       .subscribe(
         (data) => {
           this.currentArticle = data;
-          console.log('I CANT SEE CURRENT ARTICLES HERE: ', this.currentArticle);
           this.articleChanged.next();
           return this.currentArticle;
         }
@@ -56,7 +53,6 @@ export class PostsService {
       .subscribe(
         (data) => {
           this.featuredArticles = data;
-          console.log('I CANT SEE FEATURED ARTICLES HERE: ', this.featuredArticles);
           this.featuredChanged.next();
           return this.featuredArticles;
         }

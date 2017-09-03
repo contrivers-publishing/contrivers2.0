@@ -16,9 +16,7 @@ export class FullArticleComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(params => {
       this.slug = params['slug'];
-      console.log('getting product with slug: ', this.slug);
       this.article = this.postsService.getArticle(this.slug);
-      console.log("in full article init", this.article);
     });
     this.postsService.articleChanged.subscribe(
       () => {
