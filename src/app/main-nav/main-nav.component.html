@@ -1,76 +1,33 @@
-<!-- <div class="top-nav-wrapper sticky-nav sticky-nav-on enable" [ngClass]="{'sticky-nav-showing': true}">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="main-menu">
-                    <a href="#" class="top-nav-trigger" (click)="onShowMenu()">
-                        <span class="bars">
-                        <span></span><span></span><span></span>
-                        </span>
-                    </a>
-                    <ul class="top-nav" [ngStyle]="{'display': displayType}">
-                        <li id="about-page" class="menu-item menu-item-type-post_type menu-item-object-page"><a routerLink="/about/">About</a></li>
-                        <li id="contact-page" class="menu-item menu-item-type-post_type menu-item-object-page"><a routerLink="/contact/">Contact</a></li>
-                        <li id="options-page" class="menu-item menu-item-type-post_type menu-item-object-page"><a routerLink="/options/">Options</a></li>
-                    </ul>
-                </div>
-                <div class="modules">
-                    <ul class="social-icons small">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                        <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
-                        <li><a href="#"><i class="fa fa-envelope-o"></i></a></li>
-                    </ul>
-                </div>
-                <!-- /modules --
-            </div>
-            <!-- /col-md-12 --
-        </div>
-        <!-- /row --
-    </div>
-    <!-- /container --
-</div>
-<!-- /top-nav-wrapper -->
-
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <nav>
-                <span class="bars">
-                            <span></span><span></span><span></span>
-                </span>
-                <!-- <a href="#">
-
-                    </a> -->
-                <ul id="nav" class="main-nav-items">
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                        <a href="#">Centered Logo Example</a>
-                    </li>
-                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category">
-                        <a href="http://seaboardthemes.com/flexzine/wp/category/fashion/">Fashion</a>
-                    </li>
-                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category">
-                        <a href="http://seaboardthemes.com/flexzine/wp/category/lifestyle/">Lifestyle</a>
-                    </li>
-                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category">
-                        <a href="http://seaboardthemes.com/flexzine/wp/category/food/">Food</a>
-                    </li>
+            <div>
+                <nav class="nav-trigger" (click)="onShowMenu()">
+                    <span class="bars">
+                      <span></span><span></span><span></span>
+                    </span>
+                </nav>
+            </div>
+            <div class="top-menu logo-container">
+                <a href="http://www.contrivers.org">
+                    <img alt="logo" width="125px" src="../../assets/img/logo/crheader.png">
+                </a>
+                <ul class="main-nav-items">
+                    <li id="about-page" class="menu-item menu-item-type-post_type menu-item-object-page"><a routerLink="/about/">About</a></li>
+                    <li id="contact-page" class="menu-item menu-item-type-post_type menu-item-object-page"><a routerLink="/contact/">Contact</a></li>
+                    <li id="options-page" class="menu-item menu-item-type-post_type menu-item-object-page"><a routerLink="/options/">Options</a></li>
                 </ul>
-                <div class="search-container" [ngClass]="{'form-is-showing': isFormShown}">
-                    <a href="#" class="trigger" (click)="onShowForm()">
-                        <i class="fa fa-search"></i>
-                    </a>
-                    <form id="signup_form" method="get" class="search-form" action="#">
-                        <div class="input_var">
-                            <input class="search-field" type="search" id="s" name="s" placeholder="Search...">
-                            <input type="submit" value="">
-                        </div>
-                    </form>
-                </div>
-                <!-- /search-container -->
-            </nav>
+            </div>
+            <div class="modules">
+                <ul class="social-icons small">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+                    <li><a href="#"><i class="fa fa-envelope-o"></i></a></li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>

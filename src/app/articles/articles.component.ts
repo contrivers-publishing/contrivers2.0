@@ -12,7 +12,6 @@ export class ArticlesComponent implements OnInit {
   articles: any;
   limit = 5;
   isFormShown: Boolean = false;
-  displayType: String = 'none';
 
   constructor(private postsService: PostsService) {
     this.postsService = postsService;
@@ -38,11 +37,5 @@ export class ArticlesComponent implements OnInit {
     this.isFormShown = !this.isFormShown;
   }
 
-  onShowMenu() {
-    if(this.displayType === 'none') {
-      this.displayType = 'block';
-    } else {
-      this.displayType = 'none';
-    }
-  }
+
 }

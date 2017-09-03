@@ -1,66 +1,63 @@
-<div class="col-md-12">
-    <div class="post-featured-wrapper post-right">
-        <div class="blog-post-slider post-slider-right slick-initialized slick-slider" data-show-nav="true" data-speed="3000">
-            <!--featured post slider query starts here-->
-            <div aria-live="polite" class="slick-list draggable">
-                <div class="slick-track" role="listbox" style="opacity: 1; ">
-                    <article class="blog-post post-133 post type-post status-publish format-standard has-post-thumbnail hentry slick-slide slick-current slick-active" data-slick-index="4" aria-hidden="false" tabindex="0" role="option" aria-describedby="primary" style="width: 720px;">
-                        <header>
-                            <div class="post-thumb">
-                                <figure>
-                                    <a routerLink="/article/{{ featuredArticles[0].slug }}" title="{{ featuredArticles[0].title }}" tabindex="0">
-                                        <img src="{{ featuredArticles[0].image.url }}" class="featured attachment-flexzine-big-hor size-flexzine-big-hor wp-post-image">
-                                    </a>
-                                </figure>
-                                <div class="post-details">
-                                    <ul class="categories">
-                                        <li><a routerLink="/article/{{ featuredArticles[0].slug }}" rel="category tag" tabindex="0">{{ featuredArticles[0].contentType }}</a></li>
-                                    </ul>
-                                    <h3><a routerLink="/article/{{ featuredArticles[0].slug }}" tabindex="0">{{ featuredArticles[0].title }}</a></h3>
-                                    <div class="meta">
-                                        <span>By: {{ featuredArticles[0].author.name.first }} {{ featuredArticles[0].author.name.last }}</span>
-                                        <span><time>Published: {{ featuredArticles[0].publishedDate | date }}</time></span>
-                                        <!-- <span>Tags: {{ featuredArticles[0].tags.join(", ") }}</span> -->
-                                    </div>
-                                    <!-- /meta -->
-
-                                </div>
-                            </div>
-                            <div class="slider-overlay"></div>
-                        </header>
-                    </article>
-                </div>
-            </div>
-        </div>
-        <!-- /slider -->
-        <div class="featured-post-wrapper">
-            <!-- featured post query starts here -->
-            <div class="featured-post-col" *ngFor="let num of [1,2]">
-                <article class="blog-post featured-post post type-post status-publish format-standard has-post-thumbnail hentry tag-hot">
+<div class="post-featured-wrapper post-right">
+    <div class="blog-post-slider post-slider-right slick-initialized slick-slider" data-show-nav="true" data-speed="3000">
+        <!--featured post slider query starts here-->
+        <div aria-live="polite" class="slick-list draggable">
+            <div class="slick-track" role="listbox" style="opacity: 1; ">
+                <article class="blog-post post-133 post type-post status-publish format-standard has-post-thumbnail hentry slick-slide slick-current slick-active" data-slick-index="4" aria-hidden="false" tabindex="0" role="option" aria-describedby="primary" style="width: 720px;">
                     <header>
                         <div class="post-thumb">
                             <figure>
-                                <a routerLink="/article/{{ featuredArticles[num].slug }}" title="{{ featuredArticles[num].title }}">
-                                    <img src="{{ featuredArticles[num].image.url }}" class="crop attachment-flexzine-medium-ver size-flexzine-medium-ver wp-post-image"></a>
+                                <a routerLink="/article/{{ featuredArticles[0].slug }}" title="{{ featuredArticles[0].title }}" tabindex="0">
+                                    <img src="{{ featuredArticles[0].image.url }}" class="featured attachment-flexzine-big-hor size-flexzine-big-hor wp-post-image">
+                                </a>
                             </figure>
                             <div class="post-details">
                                 <ul class="categories">
-                                    <li><a routerLink="/article/{{ featuredArticles[num].slug }}" rel="category tag">{{ featuredArticles[num].contentType }}</a></li>
+                                    <li><a routerLink="/article/{{ featuredArticles[0].slug }}" rel="category tag" tabindex="0">{{ featuredArticles[0].contentType }}</a></li>
                                 </ul>
-                                <h3><a routerLink="/article/{{ featuredArticles[num].slug }}">{{ featuredArticles[num].title }}</a></h3>
+                                <h3><a routerLink="/article/{{ featuredArticles[0].slug }}" tabindex="0">{{ featuredArticles[0].title }}</a></h3>
                                 <div class="meta">
-                                    <span>By: {{ featuredArticles[num].author.name.first }} {{ featuredArticles[num].author.name.last }}</span>
-                                    <span><time>Published: {{ featuredArticles[num].publishedDate | date }}</time></span>
-                                    <!-- <span>Tags: {{ featuredArticles[num].tags.join(", ") }}</span> -->
+                                    <span>By: {{ featuredArticles[0].author.name.first }} {{ featuredArticles[0].author.name.last }}</span>
+                                    <span><time>Published: {{ featuredArticles[0].publishedDate | date }}</time></span>
+                                    <!-- <span>Tags: {{ featuredArticles[0].tags.join(", ") }}</span> -->
                                 </div>
                                 <!-- /meta -->
+
                             </div>
                         </div>
+                        <div class="slider-overlay"></div>
                     </header>
                 </article>
             </div>
-            <!--ends here -->
         </div>
     </div>
+    <!-- /slider -->
+    <div class="featured-post-wrapper">
+        <!-- featured post query starts here -->
+        <div class="featured-post-col" *ngFor="let num of [1,2]">
+            <article class="blog-post featured-post post type-post status-publish format-standard has-post-thumbnail hentry tag-hot">
+                <header>
+                    <div class="post-thumb">
+                        <figure>
+                            <a routerLink="/article/{{ featuredArticles[num].slug }}" title="{{ featuredArticles[num].title }}">
+                                <img src="{{ featuredArticles[num].image.url }}" class="crop attachment-flexzine-medium-ver size-flexzine-medium-ver wp-post-image"></a>
+                        </figure>
+                        <div class="post-details">
+                            <ul class="categories">
+                                <li><a routerLink="/article/{{ featuredArticles[num].slug }}" rel="category tag">{{ featuredArticles[num].contentType }}</a></li>
+                            </ul>
+                            <h3><a routerLink="/article/{{ featuredArticles[num].slug }}">{{ featuredArticles[num].title }}</a></h3>
+                            <div class="meta">
+                                <span>By: {{ featuredArticles[num].author.name.first }} {{ featuredArticles[num].author.name.last }}</span>
+                                <span><time>Published: {{ featuredArticles[num].publishedDate | date }}</time></span>
+                                <!-- <span>Tags: {{ featuredArticles[num].tags.join(", ") }}</span> -->
+                            </div>
+                            <!-- /meta -->
+                        </div>
+                    </div>
+                </header>
+            </article>
+        </div>
+        <!--ends here -->
+    </div>
 </div>
-<!-- /col-md-12 -->

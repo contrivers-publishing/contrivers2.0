@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-nav.component.css']
 })
 export class MainNavComponent implements OnInit {
+  displayType: String = 'none';
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  onShowMenu() {
+    if(this.displayType === 'none') {
+      this.displayType = 'block';
+    } else {
+      this.displayType = 'none';
+    }
+  }
 }

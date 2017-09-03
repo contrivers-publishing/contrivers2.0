@@ -735,6 +735,7 @@ p {
     display: inline-block;
     margin-right: 30px;
     float: left;
+    padding: 13px 0px
 }
 
 .nav-trigger .bars {
@@ -959,6 +960,7 @@ p {
 .modules {
     margin-top: 2px;
     float: right;
+    padding: 16px 0px;
 }
 
 .modules>div,

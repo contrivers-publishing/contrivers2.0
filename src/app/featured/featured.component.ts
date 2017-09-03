@@ -2,7 +2,7 @@ import { PostsService } from './../posts.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-featured',
+  selector: '[app-featured]',
   templateUrl: './featured.component.html',
   styleUrls: ['./featured.component.css']
 })
