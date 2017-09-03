@@ -1,7 +1,5 @@
 import { PostsService } from './../posts.service';
-import { Component, OnInit } from '@angular/core';
-
-// import { keystone } from 'keystone';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: '[app-articles]',
@@ -12,6 +10,7 @@ export class ArticlesComponent implements OnInit {
   articles: any;
   limit = 5;
   isFormShown: Boolean = false;
+  @Input() searchText: String;
 
   constructor(private postsService: PostsService) {
     this.postsService = postsService;
@@ -36,6 +35,5 @@ export class ArticlesComponent implements OnInit {
     console.log("button clicked", this.isFormShown);
     this.isFormShown = !this.isFormShown;
   }
-
 
 }

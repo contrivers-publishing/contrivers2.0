@@ -16,7 +16,6 @@ export class PostsService {
     this.http = http;
     console.log('post service constructor started');
     this.fetchArticles();
-
   }
 
   fetchArticles() {
