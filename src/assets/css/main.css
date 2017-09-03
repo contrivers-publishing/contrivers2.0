@@ -452,8 +452,8 @@ p {
 #pre-footer {
     background: #222;
     border-top: 6px solid #C85D43;
-    padding-top: 43px;
-    padding-bottom: 30px;
+    /* padding-top: 43px;               Remove comment when prefooter is added back
+    padding-bottom: 30px; */
 }
 
 #pre-footer a:hover {
@@ -463,7 +463,7 @@ p {
 #pre-footer .title h5 {
     color: #9f9f9f;
     text-transform: uppercase;
-    margin-bottom: 22px;
+    /* margin-bottom: 22px;             Remove comment when prefooter is added back*/
 }
 
 #pre-footer .featured-footer-post,
@@ -2023,7 +2023,7 @@ blockquote p {
 }
 
 .widget_wysija form:before {
-    content: 'ï„';
+    content: '\f101';
     font: normal normal normal 18px/1 FontAwesome;
     display: inline-block;
     width: 40px;
@@ -2037,7 +2037,7 @@ blockquote p {
 }
 
 #main-footer .widget_wysija form:before {
-    content: 'ï„';
+    content: '\f101';
     font: normal normal normal 18px/1 FontAwesome;
     display: inline-block;
     width: 40px;

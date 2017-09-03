@@ -28,6 +28,11 @@ import { PostsService } from './posts.service';
 
 // App Pipes
 import { FilterPipe } from './filter.pipe';
+import { FooterMissedComponent } from './footer/footer-missed/footer-missed.component';
+import { FooterAboutComponent } from './footer/footer-about/footer-about.component';
+import { FooterPrefooterComponent } from './footer/footer-prefooter/footer-prefooter.component';
+import { MainFooterComponent } from './footer/main-footer/main-footer.component';
+import { FooterJoinComponent } from './footer/footer-join/footer-join.component';
 
 const ROUTES = [
   {
@@ -59,7 +64,12 @@ const ROUTES = [
     CommentsComponent,
     FootnotesComponent,
     MainNavComponent,
-    FilterPipe
+    FilterPipe,
+    FooterMissedComponent,
+    FooterAboutComponent,
+    FooterPrefooterComponent,
+    MainFooterComponent,
+    FooterJoinComponent
   ],
   imports: [
     BrowserModule,
