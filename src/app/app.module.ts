@@ -7,20 +7,18 @@ import { RouterModule } from '@angular/router';
 
 // App Components
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
 import { ArticlesComponent } from './articles/articles.component';
-import { FeaturedComponent } from './featured/featured.component';
+import { FeaturedComponent } from './articles/featured/featured.component';
 import { FooterComponent } from './footer/footer.component';
 import { SubscriptionComponent } from './articles/subscription/subscription.component';
 import { PieceComponent } from './articles/piece/piece.component';
 import { ContentControlComponent } from './articles/content-control/content-control.component';
-import { FullArticleComponent } from './full-article/full-article.component';
+import { FullArticleComponent } from './articles/full-article/full-article.component';
 import { MainPageComponent } from './main-page/main-page.component';
-import { StickNavComponent } from './sticky-nav/sticky-nav.component';
 import { HeadComponent } from './head/head.component';
-import { SocialIconsComponent } from './full-article/social-icons/social-icons.component';
-import { CommentsComponent } from './full-article/comments/comments.component';
-import { FootnotesComponent } from './full-article/footnotes/footnotes.component';
+import { SocialIconsComponent } from './articles/full-article/social-icons/social-icons.component';
+import { CommentsComponent } from './articles/full-article/comments/comments.component';
+import { FootnotesComponent } from './articles/full-article/footnotes/footnotes.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
 
 // App services
@@ -50,7 +48,6 @@ const ROUTES = [
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
     ArticlesComponent,
     FeaturedComponent,
     FooterComponent,
@@ -59,7 +56,6 @@ const ROUTES = [
     ContentControlComponent,
     FullArticleComponent,
     MainPageComponent,
-    StickNavComponent,
     HeadComponent,
     SocialIconsComponent,
     CommentsComponent,

@@ -1,6 +1,6 @@
-import { PostsService } from './../posts.service';
+import { PostsService } from './../../posts.service';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-full-article',
