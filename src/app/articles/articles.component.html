@@ -7,15 +7,12 @@
     <div class="search-container" [ngClass]="{'form-is-showing': isFormShown}">
         <form id="signup_form" method="get" class="search-form" action="#">
             <div class="input_var">
-                <input [(ngModel)]="searchText" class="search-field" type="search" id="s" name="s" placeholder="Search...">
+                <input [(ngModel)]="searchText" class="search-field" type="search" name="search" placeholder="Search...">
             </div>
         </form>
     </div>
 </div>
 
-<!-- /search-container -->
-
-<!-- /page-titlebar -->
 <div id="latest-posts" class="tab-contents active">
     <div class="contents-inner latest-post-container list-view clearfix">
         <!--latest post query goes here-->
