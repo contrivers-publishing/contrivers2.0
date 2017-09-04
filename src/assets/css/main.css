@@ -2462,12 +2462,11 @@ blockquote p {
 
 #bottom-footer {
     text-align: center;
-    padding-top: 5px;
 }
 
 #bottom-footer .bottom-footer-inner {
-    border-top: 1px solid #404040;
-    border-bottom: 1px solid #404040;
+    border-top: 3px solid #B2513D;
+    border-bottom: 3px solid #B2513D;
     padding-top: 52px;
     padding-bottom: 45px;
 }
