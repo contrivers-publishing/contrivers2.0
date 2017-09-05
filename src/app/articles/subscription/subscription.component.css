@@ -5,3 +5,9 @@
 input {
     display: inline-block;
 }
+
+textarea {
+    background-color: transparent;
+    margin: 0px;
+    padding: 0px;
+}
