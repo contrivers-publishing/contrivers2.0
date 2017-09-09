@@ -686,10 +686,10 @@ p {
 
 .search-container form input[type=search] {
     padding: 10px 10px;
-    margin-top: 11px;
+    margin-top: 10px;
     width: 100%;
-    border-top: 0 none !important;
-    border: 1px solid #eeeeee;
+    /* border-top: 0 none !important; */
+    border: 1px solid #ccc;
     font-size: 12px;
     position: absolute;
     top: 0;

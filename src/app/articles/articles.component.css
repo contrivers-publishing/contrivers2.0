@@ -3,3 +3,31 @@ i {
     padding: 2px 10px;
     cursor: pointer;
 }
+
+span {
+    float: left;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-size: 10px;
+    margin-top: 3px;
+    margin-bottom: auto;
+}
+
+input {
+    color: #757575;
+}
+
+.search-container form input[type=search]::-webkit-input-placeholder {
+    color: #757575;
+}
+
+.search-container form input[type=search]:-moz-placeholder {
+    color: #757575;
+}
+
+.search-container form input[type=search]::-moz-placeholder {
+    color: #757575;
+}
+
+.search-container form input[type=search]:-ms-input-placeholder {
+    color: #757575;
+}
