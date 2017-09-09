@@ -31,3 +31,7 @@ input {
 .search-container form input[type=search]:-ms-input-placeholder {
     color: #757575;
 }
+
+.blog-tabs h5 {
+    padding-left: 85px;
+}
