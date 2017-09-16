@@ -32,6 +32,7 @@ import { FooterPrefooterComponent } from './footer/footer-prefooter/footer-prefo
 import { MainFooterComponent } from './footer/main-footer/main-footer.component';
 import { FooterJoinComponent } from './footer/footer-join/footer-join.component';
 import { BottomFooterComponent } from './footer/bottom-footer/bottom-footer.component';
+import { NoteComponent } from './articles/full-article/note/note.component';
 
 const ROUTES = [
   {
@@ -67,7 +68,8 @@ const ROUTES = [
     FooterPrefooterComponent,
     MainFooterComponent,
     FooterJoinComponent,
-    BottomFooterComponent
+    BottomFooterComponent,
+    NoteComponent
   ],
   imports: [
     BrowserModule,
