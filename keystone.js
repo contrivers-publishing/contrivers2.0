@@ -22,7 +22,10 @@ keystone.init({
     'favicon': 'public/favicon.ico',
     'views': 'templates/views',
     'view engine': '.hbs',
-    'wysiwyg additional options': { 'valid_elements': '*[*]' },
+    'wysiwyg additional options': {
+        'valid_elements': '*[*]',
+        'forced_root_block': ''
+    },
     'custom engine': handlebars.create({
         layoutsDir: 'templates/views/layouts',
         partialsDir: 'templates/views/partials',
