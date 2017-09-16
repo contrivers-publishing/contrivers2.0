@@ -11,15 +11,18 @@ var handlebars = require('express-handlebars');
 // and documentation.
 
 keystone.init({
+    'wysiwyg override toolbar': false,
+    'wysiwyg menubar': true,
+    'wysiwyg skin': 'lightgray',
+    'wysiwyg additional plugins': 'advcode',
     'name': 'Contrivers\' Review',
     'brand': 'Contrivers\' Review',
-
     'sass': 'public',
     'static': ['public', 'dist'],
     'favicon': 'public/favicon.ico',
     'views': 'templates/views',
     'view engine': '.hbs',
-
+    'wysiwyg additional options': { 'valid_elements': '*[*]' },
     'custom engine': handlebars.create({
         layoutsDir: 'templates/views/layouts',
         partialsDir: 'templates/views/partials',
@@ -27,9 +30,7 @@ keystone.init({
         helpers: new require('./templates/views/helpers')(),
         extname: '.hbs',
     }).engine,
-
     'emails': 'templates/emails',
-
     'auto update': true,
     'session': true,
     'auth': true,
