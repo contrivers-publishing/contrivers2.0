@@ -25,7 +25,8 @@
             "../node_modules/bootstrap/dist/js/bootstrap.min.js",
             "../src/assets/js/vendor/modernizr.min.js",
             "../src/assets/js/plugins.js",
-            "../src/assets/js/main.js"
+            "../src/assets/js/main.js",
+            "../src/assets/js/bigfoot.js"
         ],
         "environmentSource": "environments/environment.ts",
         "environments": {
