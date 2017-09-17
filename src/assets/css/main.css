@@ -1315,6 +1315,20 @@ p {
     margin-bottom: 20px;
 }
 
+.bigfoot-footnote__container {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font-family: inherit;
+    font-style: inherit;
+    font-variant-caps: inherit;
+    line-height: inherit;
+    color: #B0614C;
+    vertical-align: super;
+    font-size: 11px;
+    font-weight: 900;
+}
+
 .blog-post .post-content {
     color: #606060;
     line-height: 18px;
@@ -1955,7 +1969,7 @@ p {
 .blog-navigation .blog-navigation-link:hover {
     background: #333333;
     border-color: #333333;
-    color: #a75643;
+    color: #B0614C;
 }
 
 
@@ -1963,7 +1977,7 @@ p {
 
 blockquote {
     padding-left: 20px;
-    border-left: 3px solid #eeeeee;
+    border-left: 7px solid #a75643;
     font-size: 17px;
     line-height: 27px;
     color: #888888;
