@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./full-article.component.css']
 })
 export class FullArticleComponent implements OnInit {
-  slug: string = 'initial slug';
+  slug = 'initial slug';
   article: any = 'initial article';
 
   constructor(private postsService: PostsService, private route: ActivatedRoute) { }

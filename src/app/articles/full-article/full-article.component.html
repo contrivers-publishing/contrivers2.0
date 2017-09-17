@@ -3,10 +3,9 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="contents-inner blog-single clearfix">
-
                     <article class="blog-post col-md-12">
                         <header>
-                            <h3><a routerLink="/article/{{ article.slug }}">{{ article.title }}</a></h3>
+                            <h3>{{ article.title }}</h3>
                             <div class="meta">
                                 <span>By: {{article.author.name.first}} {{article.author.name.last}}</span>
                                 <span><time>Published: {{article.publishedDate | date}}</time></span>
@@ -18,7 +17,7 @@
                             </figure>
                         </header>
 
-                        <div class="post-content" [innerHTML]="article.content.extended"></div>
+                        <div class="post-content" [innerHTML]="article | notes"></div>
                         <!-- /post-content -->
 
                         <div *ngIf="article.footnotes.length > 0" class="post-content" app-footnotes [footnotes]="article.footnotes"></div>

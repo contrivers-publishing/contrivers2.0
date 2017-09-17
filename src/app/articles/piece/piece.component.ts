@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PieceComponent implements OnInit {
   @Input() article;
+  @Input() test;
 
   constructor() { }
 

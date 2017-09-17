@@ -1,16 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'footnote',
+  selector: '[app-note]',
   templateUrl: './note.component.html',
   styleUrls: ['./note.component.css']
 })
 export class NoteComponent implements OnInit {
-  number: number;
+  @Input('app-note') number: number;
 
   constructor() { }
 
   ngOnInit() {
+    console.log('calling from inside app-note')
   }
 
 }
