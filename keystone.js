@@ -11,10 +11,10 @@ var handlebars = require('express-handlebars');
 // and documentation.
 
 keystone.init({
-    'wysiwyg override toolbar': false,
+    'wysiwyg override toolbar': true,
     'wysiwyg menubar': true,
     'wysiwyg skin': 'lightgray',
-    'wysiwyg additional plugins': 'advcode',
+    'wysiwyg additional plugins': 'advcode, anchor',
     'name': 'Contrivers\' Review',
     'brand': 'Contrivers\' Review',
     'sass': 'public',
