@@ -11,25 +11,34 @@ export class NotesPipe implements PipeTransform {
   articleText: string;
   space: number;
 
-
   transform(value: any): string {
-    this.articleText = value.content.extended;
-    this.spot = this.articleText.indexOf('###');
-    this.space = this.articleText.slice(this.spot).indexOf(' ');
-    this.noteNumber = this.articleText.slice(this.spot + 3, this.spot + this.space);
-    this.replaceText = this.articleText.slice(this.spot, this.spot + this.space);
+    this.articleText = value.content.extended.slice();
+    if (this.articleText.indexOf('###')<0) {
+      return this.articleText;
+    } else {
+      while (this.articleText.indexOf('###')>0) {
+        this.articleText = this.reformatNotes(this.articleText);
+      }
+    }
+    return this.articleText;
+  }
+
+  reformatNotes(text) {
+    this.spot = text.indexOf('###');
+    this.space = text.slice(this.spot).indexOf(' ');
+    this.noteNumber = text.slice(this.spot + 3, this.spot + this.space);
+    this.replaceText = text.slice(this.spot, this.spot + this.space);
     this.noteTemplate = `
         <div class="bigfoot-footnote__container">${this.noteNumber}</div>
     `;
+    console.log('Spot:', this.spot)
     console.log('Number:',this.noteNumber);
     console.log('Space:', this.space);
     console.log('replaceText:', this.replaceText);
     console.log('Template:', this.noteTemplate);
-
-    return this.articleText.replace(this.replaceText,this.noteTemplate);
+    text = text.replace(this.replaceText,this.noteTemplate);
+    return text;
   }
-
-
 
 }
 
