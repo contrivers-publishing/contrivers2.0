@@ -34,7 +34,7 @@
     <div class="featured-post-wrapper">
         <!-- featured post query starts here -->
         <div class="featured-post-col" *ngFor="let num of [1,2]">
-            <article class="blog-post featured-post post type-post status-publish format-standard has-post-thumbnail hentry tag-hot">
+            <article *ngIf="featuredArticles[num]" class="blog-post featured-post post type-post status-publish format-standard has-post-thumbnail hentry tag-hot">
                 <header>
                     <div class="post-thumb">
                         <figure>
