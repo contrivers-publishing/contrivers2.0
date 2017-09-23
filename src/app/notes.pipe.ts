@@ -30,10 +30,8 @@ export class NotesPipe implements PipeTransform {
     this.spot = text.indexOf('###');
     // this.space = text.slice(this.spot).indexOf(' ');
     if ('0123456789'.indexOf(text.slice(this.spot + 4, this.spot + 5)) > -1) {
-      console.log("number true", text.slice(this.spot + 4, this.spot + 5));
       this.space = 5;
     } else {
-      console.log("number false", text.slice(this.spot, 1));
       this.space = 4;
     }
     this.noteNumber = text.slice(this.spot + 3, this.spot + this.space);
