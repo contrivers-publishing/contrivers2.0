@@ -28,7 +28,6 @@ export class NotesPipe implements PipeTransform {
 
   reformatNotes(text, notes) {
     this.spot = text.indexOf('###');
-    // this.space = text.slice(this.spot).indexOf(' ');
     if ('0123456789'.indexOf(text.slice(this.spot + 4, this.spot + 5)) > -1) {
       this.space = 5;
     } else {
@@ -38,7 +37,6 @@ export class NotesPipe implements PipeTransform {
     this.replaceText = text.slice(this.spot, this.spot + this.space);
     this.noteTemplate = `<div class="bigfoot-footnote__container" id="fnref:${this.noteNumber}"><button class="bigfoot-footnote__button"  alt="See Footnote ${this.noteNumber}" rel="footnote">${this.noteNumber}</button></div>`;
     text = text.replace(this.replaceText, this.noteTemplate);
-    // console.log('updated text',text)
     return text;
   }
 
