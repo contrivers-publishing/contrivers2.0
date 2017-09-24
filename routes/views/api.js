@@ -19,7 +19,7 @@ router.get('/', function(req, res) {
     q.exec(function(err, results) {
         res.json(results);
     });
-})
+});
 
 router.get('/featured', function(req, res) {
     var q = keystone.list('Post').model.find({
@@ -30,7 +30,18 @@ router.get('/featured', function(req, res) {
     q.exec(function(err, results) {
         res.json(results);
     });
-})
+});
+
+router.get('/missed', function(req, res) {
+    var q = keystone.list('Post').model.find({
+        state: 'published',
+        missed: true
+    }).sort('-publishedDate').populate('author categories');
+
+    q.exec(function(err, results) {
+        res.json(results);
+    });
+});
 
 router.get('/:slug', function(req, res) {
     var locals = res.locals;
@@ -44,6 +55,6 @@ router.get('/:slug', function(req, res) {
     q.exec(function(err, results) {
         res.json(results);
     });
-})
+});
 
 exports = module.exports = router;
