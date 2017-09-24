@@ -1,35 +1,18 @@
 <div id="latest-posts-5" class="widget widget_latest_posts_entries">
     <h5 class="footer-widget-title">In Case You Missed It</h5>
-    <ul class="recent-post style1">
-        <li>
-            <div class="featured-image">
-                <a href="http://seaboardthemes.com/flexzine/wp/herschel-supply-updates-its-bhw-collection-with-apexknit-technology/" title="Herschel Supply Updates Its BHW Collection with ApexKnit Technology"><img width="120" height="85" src="http://seaboardthemes.com/flexzine/wp/wp-content/uploads/2016/07/herschel-supply-apexknit-collection-9-120x85.jpg" class="attachment-flexzine-thumb-alt size-flexzine-thumb-alt wp-post-image" alt="herschel-supply-apexknit-collection-9"></a>
+    <ul class="recent-post style1" *ngIf="missedArticles">
+        <li *ngFor="let article of missedArticles.slice(0,3)">
+            <div *ngIf="article" class="featured-image">
+                <a routerLink="/article/{{article.slug}}" title="{{ article.title }}">
+                    <img [src]="'http://res.cloudinary.com/dpsbqi721/image/upload/h_85,c_scale/' + article.image.public_id + '.' + article.image.format" class="attachment-flexzine-thumb-alt size-flexzine-thumb-alt wp-post-image">
+                </a>
             </div>
-            <div class="post-content">
-                <p class="post-title"><a href="http://seaboardthemes.com/flexzine/wp/herschel-supply-updates-its-bhw-collection-with-apexknit-technology/">Herschel Supply Updates Its BHW Collection with ApexKnit...</a></p>
-                <span class="category"><a href="http://seaboardthemes.com/flexzine/wp/category/fashion/" rel="category tag">Fashion</a></span>
-                <span class="post-date">July 21, 2016</span>
-            </div>
-        </li>
-        <li>
-            <div class="featured-image">
-                <a href="http://seaboardthemes.com/flexzine/wp/dekmantel-patta-re-team-for-2016-summer/" title="Dekmantel &amp; Patta Re-Team for 2016 Summer"><img width="120" height="85" src="http://seaboardthemes.com/flexzine/wp/wp-content/uploads/2016/07/38-120x85.jpg" class="attachment-flexzine-thumb-alt size-flexzine-thumb-alt wp-post-image" alt="38"></a>
-            </div>
-            <div class="post-content">
-                <p class="post-title"><a href="http://seaboardthemes.com/flexzine/wp/dekmantel-patta-re-team-for-2016-summer/">Dekmantel &amp; Patta Re-Team for 2016 Summer</a></p>
-                <span class="category"><a href="http://seaboardthemes.com/flexzine/wp/category/lifestyle/" rel="category tag">Lifestyle</a></span>
-                <span class="post-date">July 21, 2016</span>
+            <div *ngIf="article" class="post-content">
+                <p class="post-title"><a routerLink="/article/{{article.slug}}">{{ article.title }}</a></p>
+                <span class="category"><a routerLink="/article/{{article.slug}}" rel="category tag">{{ article.contentType | uppercase }}</a></span>
+                <span class="post-date">{{article.publishedDate | date}}</span>
             </div>
         </li>
-        <li>
-            <div class="featured-image">
-                <a href="http://seaboardthemes.com/flexzine/wp/tom-sachs-brings-boombox-culture-back-to-the-brooklyn-museum/" title="Tom Sachs Brings Boombox Culture Back to the Brooklyn Museum"><img width="120" height="85" src="http://seaboardthemes.com/flexzine/wp/wp-content/uploads/2016/07/15-120x85.jpg" class="attachment-flexzine-thumb-alt size-flexzine-thumb-alt wp-post-image" alt="15"></a>
-            </div>
-            <div class="post-content">
-                <p class="post-title"><a href="http://seaboardthemes.com/flexzine/wp/tom-sachs-brings-boombox-culture-back-to-the-brooklyn-museum/">Tom Sachs Brings Boombox Culture Back to the...</a></p>
-                <span class="category"><a href="http://seaboardthemes.com/flexzine/wp/category/food/" rel="category tag">Food</a></span>
-                <span class="post-date">July 21, 2016</span>
-            </div>
-        </li>
+
     </ul>
 </div>

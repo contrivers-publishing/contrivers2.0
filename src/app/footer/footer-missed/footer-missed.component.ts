@@ -1,3 +1,4 @@
+import { PostsService } from './../../posts.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer-missed.component.css']
 })
 export class FooterMissedComponent implements OnInit {
+  missedArticles;
 
-  constructor() { }
+    constructor(private postsService: PostsService) { }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+      this.missedArticles = this.postsService.getMissed();
+      this.postsService.missedChanged.subscribe(
+        () => {
+          this.missedArticles = this.postsService.missedArticles;
+        }
+      );
+    }
 
 }

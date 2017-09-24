@@ -11,6 +11,8 @@ export class PostsService {
   articleChanged = new Subject<void>();
   featuredArticles;
   featuredChanged = new Subject<void>();
+  missedArticles;
+  missedChanged = new Subject<void>();
 
   constructor(private http: Http) {
     this.http = http;
@@ -59,4 +61,17 @@ export class PostsService {
       );
   }
 
+  getMissed() {
+    this.http.get('/api/missed')
+      .map((response: Response) => {
+        return response.json();
+      })
+      .subscribe(
+        (data) => {
+          this.missedArticles = data;
+          this.missedChanged.next();
+          return this.missedArticles;
+        }
+      );
+  }
 }
