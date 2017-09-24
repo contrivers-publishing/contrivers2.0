@@ -25,6 +25,7 @@ Post.add({
     contentType: { type: Types.Select, options: 'essay, book review, interview', default: 'essay', index: true },
     featured: { type: Boolean, label: 'Featured', index: true },
     hidden: { type: Boolean, label: 'Hidden', index: true },
+    missed: { type: Boolean, label: 'Missed', index: true },
     footnotes: { type: Types.TextArray, wysiwyg: true, height: 150 },
     tags: { type: Types.TextArray },
 });
