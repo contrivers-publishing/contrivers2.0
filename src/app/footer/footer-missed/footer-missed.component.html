@@ -4,12 +4,12 @@
         <li *ngFor="let article of missedArticles.slice(0,3)">
             <div *ngIf="article" class="featured-image">
                 <a routerLink="/article/{{article.slug}}" title="{{ article.title }}">
-                    <img [src]="'http://res.cloudinary.com/dpsbqi721/image/upload/h_85,c_scale/' + article.image.public_id + '.' + article.image.format" class="attachment-flexzine-thumb-alt size-flexzine-thumb-alt wp-post-image">
+                    <img [src]="'http://res.cloudinary.com/dpsbqi721/image/upload/h_85,w_120,c_fill/' + article.image.public_id + '.' + article.image.format" class="attachment-flexzine-thumb-alt size-flexzine-thumb-alt wp-post-image">
                 </a>
             </div>
             <div *ngIf="article" class="post-content">
                 <p class="post-title"><a routerLink="/article/{{article.slug}}">{{ article.title }}</a></p>
-                <span class="category"><a routerLink="/article/{{article.slug}}" rel="category tag">{{ article.contentType | uppercase }}</a></span>
+                <span class="category"><a routerLink="/article/{{article.slug}}" rel="category tag">{{ article.contentType | titlecase }}</a></span>
                 <span class="post-date">{{article.publishedDate | date}}</span>
             </div>
         </li>
