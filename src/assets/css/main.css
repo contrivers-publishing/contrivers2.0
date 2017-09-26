@@ -2098,7 +2098,7 @@ blockquote p {
 .widget_wysija form input[type=submit]:hover {
     border-color: #888;
     color: #fff;
-    background-color: #a75643;
+    background-color: #eee;
 }
 
 .widget_wysija form input[type=submit] {

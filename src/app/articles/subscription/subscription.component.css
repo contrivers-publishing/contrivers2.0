@@ -1,13 +1,40 @@
 .widget_wysija_cont {
-    padding: 0px 15px;
+    padding: 54px;
+    margin-left: 180px;
 }
 
 input {
     display: inline-block;
 }
 
+p {
+    background-color: white;
+}
+
 textarea {
-    background-color: transparent;
+    background-color: white;
     margin: 0px;
     padding: 0px;
+}
+
+div {
+    background-color: #c17257;
+}
+
+.wysija-msg {
+    color: white;
+}
+
+input::selection {
+    background-color: #eee;
+}
+
+img {
+    position: absolute;
+    display: inline-block;
+    margin: 25px;
+}
+
+p.wysija-paragraph {
+    margin-bottom: 0px;
 }
