@@ -1,5 +1,5 @@
 .widget_wysija_cont {
-    padding: 54px;
+    padding: 25px;
     margin-left: 180px;
 }
 
@@ -32,9 +32,14 @@ input::selection {
 img {
     position: absolute;
     display: inline-block;
-    margin: 25px;
+    margin: 20px;
 }
 
 p.wysija-paragraph {
     margin-bottom: 0px;
+}
+
+h4 {
+    color: white;
+    font-weight: bold;
 }
