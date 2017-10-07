@@ -53,6 +53,20 @@ router.get('/page', function(req, res) {
     });
 });
 
+router.get('/page/:slug', function(req, res) {
+    var locals = res.locals;
+    var slug = req.params.slug;
+
+    var q = keystone.list('Page').model.findOne({
+        state: 'published',
+        slug: slug,
+    }).sort('-updatedDate');
+
+    q.exec(function(err, results) {
+        res.json(results);
+    });
+});
+
 router.get('/:slug', function(req, res) {
     var locals = res.locals;
     var slug = req.params.slug;

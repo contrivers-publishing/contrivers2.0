@@ -13,10 +13,15 @@ export class PostsService {
   featuredChanged = new Subject<void>();
   missedArticles;
   missedChanged = new Subject<void>();
+  pages;
+  pagesChanged = new Subject<void>();
+  currentPage;
+  currentPageChanged = new Subject<void>();
 
   constructor(private http: Http) {
     this.http = http;
     this.fetchArticles();
+    this.getPages();
   }
 
   fetchArticles() {
@@ -29,6 +34,34 @@ export class PostsService {
           this.allArticles = data;
           this.dataChanged.next();
           return this.allArticles;
+        }
+      );
+  }
+
+  getPages() {
+    this.http.get('/api/page')
+      .map((response: Response) => {
+        return response.json();
+      })
+      .subscribe(
+        (data) => {
+          this.pages = data;
+          this.pagesChanged.next();
+          return this.pages;
+        }
+      );
+  }
+
+  getCurrentPage(slug: string) {
+    this.http.get('/api/page/' + slug)
+      .map((response: Response) => {
+        return response.json();
+      })
+      .subscribe(
+        (data) => {
+          this.currentPage = data;
+          this.currentPageChanged.next();
+          return this.currentPage;
         }
       );
   }

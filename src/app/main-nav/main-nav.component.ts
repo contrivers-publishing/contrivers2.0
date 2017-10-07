@@ -1,3 +1,4 @@
+import { PostsService } from './../posts.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainNavComponent implements OnInit {
   displayType: String = 'none';
+  pages: any;
 
-  constructor() { }
+  constructor(private postsService: PostsService) { }
 
   ngOnInit() {
+    this.pages = this.postsService.getPages();
+    this.postsService.pagesChanged.subscribe(
+      () => {
+        this.pages = this.postsService.pages;
+      }
+    );
   }
 
   onShowMenu() {

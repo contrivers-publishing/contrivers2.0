@@ -1,3 +1,73 @@
-<p>
-  page works!
-</p>
+<section class="contents-container page-container blog-post">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="heading clearfix">
+                    <h5>{{ page.title }}</h5>
+                </div>
+                <div class="page-content" [innerHTML]="page.content"></div>
+            </div>
+            <div class="col-md-4">
+                <div class="sidebar">
+                    <div class="widget widget_latest_posts_entries">
+                        <h5 class="widget-title">Recent Articles</h5>
+                        <ul class="recent-post style1" *ngIf="articles">
+                            <li *ngFor="let article of articles.slice(0,3)">
+                                <div *ngIf="article" class="featured-image">
+                                    <a routerLink="/article/{{article.slug}}" title="{{ article.title }}">
+                                        <img [src]="'http://res.cloudinary.com/dpsbqi721/image/upload/h_85,w_120,c_fill/' + article.image.public_id + '.' + article.image.format" class="attachment-flexzine-thumb-alt size-flexzine-thumb-alt wp-post-image">
+                                    </a>
+                                </div>
+                                <div *ngIf="article" class="post-content">
+                                    <p class="post-title"><a routerLink="/article/{{article.slug}}">{{ article.title }}</a></p>
+                                    <span class="category"><a routerLink="/article/{{article.slug}}" rel="category tag">{{ article.contentType | titlecase }}</a></span>
+                                    <span class="post-date">{{article.publishedDate | date}}</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="wysija-3" class="widget widget_wysija">
+                        <h5 class="widget-title">Subscribe To Newsletter</h5>
+                        <div class="widget_wysija_cont">
+                            <div id="msg-form-wysija-3" class="wysija-msg ajax"></div>
+                            <form id="form-wysija-3" method="post" action="#wysija" class="widget_wysija">
+                                <p class="wysija-paragraph">
+                                    <input type="text" name="wysija[user][email]" class="wysija-input validate[required,custom[email]]" title="Enter Your Email" placeholder="Enter Your Email" value="">
+                                </p>
+                                <input class="wysija-submit wysija-submit-field" type="submit" value="Subscribe!">
+                                <input type="hidden" name="form_id" value="1">
+                                <input type="hidden" name="action" value="save">
+                                <input type="hidden" name="controller" value="subscribers">
+                                <input type="hidden" value="1" name="wysija-page">
+                                <input type="hidden" name="wysija[user_list][list_ids]" value="1">
+                            </form>
+                        </div>
+                    </div>
+                    <div app-footer-missed></div>
+                    <!-- <div id="ws_fb_like_box-2" class="widget widget_ws_fb_like_box">
+                        <h5 class="widget-title">Like Us on Facebook</h5>
+                        <div class="fb-page ws-fb-like-box fb_iframe_widget" data-href="https://www.facebook.com/facebook" data-tabs="" data-width="300" data-height="300" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-posts=""
+                            data-show-facepile="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="adapt_container_width=false&amp;app_id=&amp;container_width=293&amp;height=300&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=true&amp;small_header=false&amp;width=300"><span style="vertical-align: bottom; width: 300px; height: 214px;"><iframe name="f356ea8e6c78294" width="300px" height="300px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:page Facebook Social Plugin" src="https://www.facebook.com/v2.6/plugins/page.php?adapt_container_width=false&amp;app_id=&amp;channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FZ2duorNoYeF.js%3Fversion%3D42%23cb%3Df2d99dbc490f6e4%26domain%3Dseaboardthemes.com%26origin%3Dhttp%253A%252F%252Fseaboardthemes.com%252Ff27d561b7f9878c%26relation%3Dparent.parent&amp;container_width=293&amp;height=300&amp;hide_cover=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&amp;locale=en_US&amp;sdk=joey&amp;show_facepile=true&amp;small_header=false&amp;width=300" style="border: none; visibility: visible; width: 300px; height: 214px;" class=""></iframe></span></div>
+                        <div id="fb-root" class=" fb_reset">
+                            <div style="position: absolute; top: -10000px; height: 0px; width: 0px;">
+                                <div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="http://staticxx.facebook.com/connect/xd_arbiter/r/Z2duorNoYeF.js?version=42#channel=f27d561b7f9878c&amp;origin=http%3A%2F%2Fseaboardthemes.com"
+                                        style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame"
+                                        tabindex="-1" src="https://staticxx.facebook.com/connect/xd_arbiter/r/Z2duorNoYeF.js?version=42#channel=f27d561b7f9878c&amp;origin=http%3A%2F%2Fseaboardthemes.com" style="border: none;"></iframe></div>
+                            </div>
+                            <div style="position: absolute; top: -10000px; height: 0px; width: 0px;">
+                                <div></div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- <div class="widget widget_categories">
+                        <h5 class="widget-title">Categories</h5>
+                        <ul>
+                            <li class="cat-item"><a href="http://seaboardthemes.com/flexzine/wp/category/art/">Art</a> (7)
+                            </li>
+                        </ul>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -12,10 +12,10 @@
                 <a href="http://www.contrivers.org">
                     <img alt="logo" width="125px" src="../../assets/img/logo/crheader.png">
                 </a>
-                <ul class="main-nav-items">
-                    <li id="about-page" class="menu-item menu-item-type-post_type menu-item-object-page"><a routerLink="/about/">About</a></li>
-                    <li id="contact-page" class="menu-item menu-item-type-post_type menu-item-object-page"><a routerLink="/contact/">Contact</a></li>
-                    <li id="options-page" class="menu-item menu-item-type-post_type menu-item-object-page"><a routerLink="/options/">Options</a></li>
+                <ul class="main-nav-items" *ngIf="pages">
+                    <li *ngFor="let page of pages" [id]="page.slug" class="menu-item menu-item-type-post_type menu-item-object-page">
+                        <a routerLink="/page/{{ page.slug }}">{{ page.title }}</a>
+                    </li>
                 </ul>
             </div>
             <div class="modules">
