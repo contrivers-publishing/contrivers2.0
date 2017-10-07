@@ -1,3 +1,4 @@
+import { Component } from '@angular/core';
 // Angular imports
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -20,12 +21,7 @@ import { SocialIconsComponent } from './articles/full-article/social-icons/socia
 import { CommentsComponent } from './articles/full-article/comments/comments.component';
 import { FootnotesComponent } from './articles/full-article/footnotes/footnotes.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
-
-// App services
-import { PostsService } from './posts.service';
-
-// App Pipes
-import { FilterPipe } from './filter.pipe';
+import { PageComponent } from './page/page.component';
 import { FooterMissedComponent } from './footer/footer-missed/footer-missed.component';
 import { FooterAboutComponent } from './footer/footer-about/footer-about.component';
 import { FooterPrefooterComponent } from './footer/footer-prefooter/footer-prefooter.component';
@@ -33,6 +29,12 @@ import { MainFooterComponent } from './footer/main-footer/main-footer.component'
 import { FooterJoinComponent } from './footer/footer-join/footer-join.component';
 import { BottomFooterComponent } from './footer/bottom-footer/bottom-footer.component';
 import { NoteComponent } from './articles/full-article/note/note.component';
+
+// App services
+import { PostsService } from './posts.service';
+
+// App Pipes
+import { FilterPipe } from './filter.pipe';
 import { NotesPipe } from './notes.pipe';
 
 const ROUTES = [
@@ -44,6 +46,10 @@ const ROUTES = [
   {
     path: 'article/:slug',
     component: FullArticleComponent
+  },
+  {
+    path: 'page/:slug',
+    component: PageComponent
   }
 ];
 
@@ -71,7 +77,8 @@ const ROUTES = [
     FooterJoinComponent,
     BottomFooterComponent,
     NoteComponent,
-    NotesPipe
+    NotesPipe,
+    PageComponent
   ],
   imports: [
     BrowserModule,
