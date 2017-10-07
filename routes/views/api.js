@@ -43,6 +43,16 @@ router.get('/missed', function(req, res) {
     });
 });
 
+router.get('/page', function(req, res) {
+    var q = keystone.list('Page').model.find({
+        state: 'published'
+    }).sort('-updatedDate');
+
+    q.exec(function(err, results) {
+        res.json(results);
+    });
+});
+
 router.get('/:slug', function(req, res) {
     var locals = res.locals;
     var slug = req.params.slug;
