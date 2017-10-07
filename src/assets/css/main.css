@@ -1978,8 +1978,8 @@ p {
 
 blockquote {
     padding-left: 20px;
-    border-left: 7px solid #a75643;
-    font-size: 17px;
+    border-left: 4px solid #a75643;
+    font-size: 14px;
     line-height: 27px;
     color: #888888;
 }
