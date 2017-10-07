@@ -267,7 +267,7 @@ section {
 }
 
 a {
-    color: #333333;
+    color: #a75643;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     transition: all 0.3s ease;
@@ -282,7 +282,7 @@ i {
 a:active,
 a:focus,
 a:hover {
-    color: #a75643;
+    color: #E7755B;
     text-decoration: none;
 }
 
