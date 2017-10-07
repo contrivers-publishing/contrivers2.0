@@ -19,7 +19,7 @@
                                     </a>
                                 </div>
                                 <div *ngIf="article" class="post-content">
-                                    <p class="post-title"><a routerLink="/article/{{article.slug}}">{{ article.title }}</a></p>
+                                    <p class="post-title"><a routerLink="/article/{{article.slug}}">{{ article.title | truncate: 70 }}</a></p>
                                     <span class="category"><a routerLink="/article/{{article.slug}}" rel="category tag">{{ article.contentType | titlecase }}</a></span>
                                     <span class="post-date">{{article.publishedDate | date}}</span>
                                 </div>

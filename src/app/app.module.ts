@@ -36,6 +36,7 @@ import { PostsService } from './posts.service';
 // App Pipes
 import { FilterPipe } from './filter.pipe';
 import { NotesPipe } from './notes.pipe';
+import { TruncatePipe } from './truncate.pipe';
 
 const ROUTES = [
   {
@@ -78,7 +79,8 @@ const ROUTES = [
     BottomFooterComponent,
     NoteComponent,
     NotesPipe,
-    PageComponent
+    PageComponent,
+    TruncatePipe
   ],
   imports: [
     BrowserModule,
