@@ -17,7 +17,7 @@
                             </figure>
                         </header>
 
-                        <div class="post-content" [innerHTML]="article | notes"></div>
+                        <div class="post-content" [innerHTML]="article | notes | safeHtml"></div>
                         <!-- /post-content -->
 
                         <div *ngIf="article.footnotes.length > 0" class="post-content" app-footnotes [footnotes]="article.footnotes"></div>
