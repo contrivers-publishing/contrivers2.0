@@ -7,6 +7,7 @@
                 </div>
                 <img [src]="'http://res.cloudinary.com/dpsbqi721/image/upload/h_230,c_scale/' + page.image.public_id + '.' + page.image.format" class="attachment-full size-full wp-post-image" align="left">
                 <div class="page-content" [innerHTML]="page.content | safeHtml"></div>
+                <div *ngIf="page.slug === 'contact-us'" app-contact-form class="contact-form flexzine-form mt-30"></div>
             </div>
             <div class="col-md-4">
                 <div class="sidebar">

@@ -38,6 +38,7 @@ import { FilterPipe } from './filter.pipe';
 import { NotesPipe } from './notes.pipe';
 import { TruncatePipe } from './truncate.pipe';
 import { SafeHtmlPipe } from './safe-html.pipe';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 const ROUTES = [
   {
@@ -82,7 +83,8 @@ const ROUTES = [
     NotesPipe,
     PageComponent,
     TruncatePipe,
-    SafeHtmlPipe
+    SafeHtmlPipe,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,
