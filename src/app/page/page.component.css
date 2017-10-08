@@ -1,0 +1,9 @@
+img {
+    padding-right: 15px;
+    padding-bottom: 15px;
+}
+
+.page-content em {
+    font-style: italic;
+    font-size: 50px;
+}
