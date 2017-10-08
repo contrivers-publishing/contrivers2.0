@@ -1845,7 +1845,8 @@ p {
 .post-featured-wrapper {
     position: relative;
     overflow: hidden;
-    margin: 46px 0px;
+    margin-bottom: 46px;
+    margin-top: 10px;
 }
 
 .blog-post-slider.post-slider-right {
