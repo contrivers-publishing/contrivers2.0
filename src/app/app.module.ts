@@ -37,6 +37,7 @@ import { PostsService } from './posts.service';
 import { FilterPipe } from './filter.pipe';
 import { NotesPipe } from './notes.pipe';
 import { TruncatePipe } from './truncate.pipe';
+import { SafeHtmlPipe } from './safe-html.pipe';
 
 const ROUTES = [
   {
@@ -80,7 +81,8 @@ const ROUTES = [
     NoteComponent,
     NotesPipe,
     PageComponent,
-    TruncatePipe
+    TruncatePipe,
+    SafeHtmlPipe
   ],
   imports: [
     BrowserModule,
