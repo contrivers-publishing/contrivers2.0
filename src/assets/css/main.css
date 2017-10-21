@@ -138,7 +138,8 @@ td {
 select {
     padding: 8px 10px;
     border: 1px solid #d2d2d2;
-    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    /* font-family: "Open Sans", Helvetica, Arial, sans-serif; */
+    font-family: "Droid Serif", Georgia, serif;
     font-size: 12px;
     line-height: 1.5;
     font-weight: 400;
@@ -255,7 +256,8 @@ body {
 }
 
 body {
-    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    /* font-family: "Roboto", Helvetica, Arial, sans-serif; */
+    font-family: "Droid Serif", Georgia, serif;
     font-size: 13px;
     font-weight: 400;
     background: white;
@@ -550,7 +552,8 @@ p {
 
 .section-title h2 {
     margin-bottom: 45px;
-    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    /* font-family: "Roboto", Helvetica, Arial, sans-serif; */
+    font-family: "Droid Serif", Georgia, serif;
     font-size: 22px;
     text-transform: uppercase;
     color: #555555;
@@ -850,7 +853,8 @@ p {
     display: inline-block;
     margin-right: 25px;
     /* padding: 18px 0; */
-    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    /* font-family: "Roboto", Helvetica, Arial, sans-serif; */
+    font-family: "Droid Serif", Georgia, serif;
     font-size: 12px;
     text-transform: uppercase;
     position: relative;
@@ -1067,7 +1071,8 @@ p {
 }
 
 .modules .cart .cart-items-container .cart-item .item-info .categories li {
-    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    /* font-family: "Roboto", Helvetica, Arial, sans-serif; */
+    font-family: "Droid Serif", Georgia, serif;
     text-transform: uppercase;
 }
 
@@ -1615,7 +1620,8 @@ p {
 }
 
 .blog-post.featured-post header h3 {
-    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-family: "Droid Serif", Georgia, serif;
+    /* font-family: "Roboto", Helvetica, Arial, sans-serif; */
     font-size: 15px;
     margin-bottom: 8px;
 }
@@ -5115,7 +5121,8 @@ h2,
 h3,
 h4,
 h5 {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Droid Serif", Georgia, serif;
+    /* font-family: 'Roboto', sans-serif; */
     margin-bottom: 1em;
 }
 
@@ -5341,7 +5348,8 @@ h5 {
 .nav-tabs li {
     float: left;
     margin-right: 25px;
-    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-family: "Droid Serif", Georgia, serif;
+    /* font-family: "Roboto", Helvetica, Arial, sans-serif; */
     font-size: 14px;
     text-transform: uppercase;
     color: #333333;
