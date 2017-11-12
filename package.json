@@ -5,9 +5,8 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng build && node keystone",
-    "dev": "ng serve",
-    "build": "ng build",
+    "dev": "ng build && node keystone",
+    "prod": "ng build --prod && node keystone",
     "test": "ng test",
     "lint": "ng lint && eslint .",
     "e2e": "ng e2e"

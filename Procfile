@@ -1,1 +1,1 @@
-web: ng build -prod && node keystone.js
+web: npm run prod
