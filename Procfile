@@ -1,1 +1,1 @@
-web: node keystone.js
+web: ng build -prod && node keystone.js
