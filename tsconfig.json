@@ -17,5 +17,10 @@
             "dom"
         ],
         "allowJs": true
-    }
+    },
+    "include": [
+        "src/app/*",
+        "src/*",
+        "src/environments/*"
+    ]
 }
