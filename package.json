@@ -4,14 +4,16 @@
   "private": true,
   "license": "MIT",
   "scripts": {
+    "postinstall": "ng build --prod --aot=false",
     "ng": "ng",
-    "dev": "ng build && node keystone",
-    "prod": "ng build --prod --aot=false && node keystone",
+    "build": "ng build",
+    "start": "ng build && node keystone",
     "test": "ng test",
     "lint": "ng lint && eslint .",
     "e2e": "ng e2e",
     "ncu": "ncu",
-    "update": "ncu -u"
+    "update": "ncu -u",
+    "clean": "rm -rf dist"
   },
   "dependencies": {
     "@angular/cli": "1.5.0",
