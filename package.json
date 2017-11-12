@@ -6,7 +6,7 @@
   "scripts": {
     "ng": "ng",
     "dev": "ng build && node keystone",
-    "prod": "ng build --prod && node keystone",
+    "prod": "ng build --prod --aot=false && node keystone",
     "test": "ng test",
     "lint": "ng lint && eslint .",
     "e2e": "ng e2e",
