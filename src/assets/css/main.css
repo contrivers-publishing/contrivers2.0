@@ -22,7 +22,7 @@ Version:  1.1
 html {
     color: #222;
     font-size: 1em;
-    line-height: 1.4;
+    line-height: 1.6;
 }
 
 audio,
@@ -258,7 +258,7 @@ body {
 body {
     /* font-family: "Roboto", Helvetica, Arial, sans-serif; */
     font-family: "Droid Serif", Georgia, serif;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 400;
     background: white;
     overflow-x: hidden;
@@ -336,7 +336,7 @@ h2 {
 }
 
 h3 {
-    font-size: 20px;
+    font-size: 24px;
 }
 
 h4 {
@@ -1342,7 +1342,7 @@ p {
 
 .blog-post .post-content {
     color: #606060;
-    line-height: 18px;
+    line-height: 24px;
 }
 
 .blog-post aside {
@@ -3997,7 +3997,7 @@ blockquote p {
 .contents-inner.list-view .blog-post .post-content p,
 .contents-inner.grid-view .blog-post .post-content p {
     margin-bottom: 0;
-    line-height: 18px;
+    line-height: 24px;
 }
 
 .grid-post-series .blog-post.col-md-6 {

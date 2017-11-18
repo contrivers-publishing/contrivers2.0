@@ -4,13 +4,18 @@
         <p>Contrivers’ is always looking to add new voices and fresh perspectives. if you have thoughts to share, send our editors a message using the text field below.</p>
     </div>
 </div>
-<div class="col-md-12 flexine-form">
+<!-- <div class="col-md-12 flexine-form">
     <textarea class="wysija-input" name="your-message" aria-invalid="false" style="background: transparent;"></textarea>
-</div>
+</div> -->
 
-<form action="#wysija" class="widget_wysija ng-untouched ng-pristine ng-valid" id="form-wysija-2" method="post" novalidate="">
-    <p class="wysija-paragraph">
-        <input class="wysija-input" name="wysija" placeholder="Enter Your Email" title="Enter Your Email" type="text" value="">
-    </p>
-    <input class="wysija-submit wysija-submit-field" type="submit" value="Subscribe!">
-</form>
+<div id="wysija-2" class="widget widget_wysija">
+    <div class="widget_wysija_cont">
+        <div id="msg-form-wysija-2" class="wysija-msg ajax"></div>
+        <form id="form-wysija-2" method="post" action="#wysija" class="widget_wysija">
+            <p class="wysija-paragraph">
+                <input type="text" name="wysija" class="wysija-input" title="Enter Your Email" placeholder="Enter Your Email" value="" />
+            </p>
+            <input class="wysija-submit wysija-submit-field" type="submit" value="Subscribe!">
+        </form>
+    </div>
+</div>

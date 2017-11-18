@@ -11,3 +11,7 @@ img.featured {
     object-fit: cover;
     max-width: 100%;
 }
+
+a {
+    background-color: rgba(0, 0, 0, 0.6);
+}
