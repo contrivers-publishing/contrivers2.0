@@ -6,7 +6,7 @@
     "scripts": {
         "ng": "ng",
         "start": "ng build && node keystone",
-        "postinstall": "ng build --aot=false --prod",
+        "postinstall": "ng build --aot --prod",
         "dev": "ng serve",
         "build": "ng build",
         "test": "ng test",
@@ -43,7 +43,6 @@
         "zone.js": "^0.8.18"
     },
     "devDependencies": {
-
         "@types/jasmine": "2.5.38",
         "@types/node": "~6.0.60",
         "babel": "^6.23.0",
