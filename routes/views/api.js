@@ -81,4 +81,16 @@ router.get('/:slug', function(req, res) {
     });
 });
 
+router.post('/subscribe/:email', function(req, res) {
+    var email = req.params.email;
+    var newPost = new Subscription.model({
+        email: email,
+        state: 'active'
+    });
+
+    newPost.save(function(err) {
+        console.log('Thanks for subscribing');
+    });
+})
+
 exports = module.exports = router;
