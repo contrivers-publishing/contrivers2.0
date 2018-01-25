@@ -385,6 +385,13 @@ p {
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 ***********************************************************************************************/
 
+span.note {
+    color: rgb(166, 86, 67) !important;
+    font-size: 100%;
+    vertical-align: super !important;
+    cursor: pointer !important;
+}
+
 .box-layout #wrapper {
     width: 1100px;
     margin: 0 auto;
@@ -1347,13 +1354,6 @@ p {
 .blog-post .post-content {
     color: #606060;
     line-height: 24px;
-}
-
-.blog-post .post-content>span.note {
-    color: rgb(166, 86, 67);
-    font-size: 100%;
-    vertical-align: super;
-    cursor: pointer;
 }
 
 .blog-post aside {
