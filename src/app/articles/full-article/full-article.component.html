@@ -4,7 +4,7 @@
             <div class="col-md-12">
                 <div class="contents-inner blog-single clearfix">
                     <article class="blog-post col-md-12">
-                        <header>
+                        <header *ngIf="article">
                             <h3>{{ article.title }}</h3>
                             <div class="meta">
                                 <span>By: {{article.author.name.first}} {{article.author.name.last}}</span>
@@ -17,18 +17,18 @@
                             </figure>
                         </header>
 
-                        <div class="post-content" [innerHTML]="article | notes | safeHtml"></div>
+                        <div *ngIf="article" class="post-content" [innerHTML]="article | notes | safeHtml"></div>
                         <!-- /post-content -->
 
-                        <div *ngIf="article.footnotes.length > 0" class="post-content" app-footnotes [footnotes]="article.footnotes"></div>
+                        <div *ngIf="article && article.footnotes.length > 0" class="post-content" app-footnotes [footnotes]="article.footnotes"></div>
 
                         <hr>
 
                         <app-social-icons></app-social-icons>
 
-                        <div class="post-meta">
+                        <div class="post-meta" *ngIf="article">
                             <p class="author">By: <a href="#">{{ article.author.name.first }} {{ article.author.name.last }}</a></p>
-                            <div class="post-tags">
+                            <div class="post-tags" *ngIf="article">
                                 <ul>
                                     Tags:
                                     <li *ngFor="let tag of article.tags"><a href="#"> &nbsp;{{ tag }}</a></li>
@@ -42,7 +42,7 @@
                             <figure class="avatar">
                                 <img alt="" src="http://2.gravatar.com/avatar/29e43607c06fb317e13c09a8a67e3532?s=90&amp;d=mm&amp;r=g" srcset="http://2.gravatar.com/avatar/29e43607c06fb317e13c09a8a67e3532?s=180&amp;d=mm&amp;r=g 2x" class="media-object img-responsive img-circle avatar-90 photo"
                                     height="90" width="90"> </figure>
-                            <div class="author-details">
+                            <div class="author-details" *ngIf="article">
                                 <h2>{{ article.author.name.first }} {{ article.author.name.last }}</h2>
                                 <p [innerHTML]="article.author.bio"></p>
                                 <ul class="social-icons small">

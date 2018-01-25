@@ -612,6 +612,10 @@ p {
 
 /* Button */
 
+.post-content>button {
+    columns: rgb(240, 15, 15)
+}
+
 .button {
     display: inline-block;
     padding: 13px 35px;
@@ -1343,6 +1347,13 @@ p {
 .blog-post .post-content {
     color: #606060;
     line-height: 24px;
+}
+
+.blog-post .post-content>span.note {
+    color: rgb(166, 86, 67);
+    font-size: 100%;
+    vertical-align: super;
+    cursor: pointer;
 }
 
 .blog-post aside {
