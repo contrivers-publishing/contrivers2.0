@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { PostsService } from '../../../posts.service';
+
 
 @Component({
   selector: '[app-footnotes]',
@@ -7,10 +9,20 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class FootnotesComponent implements OnInit {
   @Input() footnotes;
+  activeFootnote;
 
-  constructor() { }
+  constructor(private postsService: PostsService) { }
 
   ngOnInit() {
+    this.postsService.activeFootnoteChanged.subscribe(
+      () => {
+        this.activeFootnote = this.postsService.activeFootnote;
+      }
+    );
+  }
+
+  changeFootnote(num: number) {
+    this.postsService.setActiveFootnote(num);
   }
 
 }

@@ -24,7 +24,7 @@ Post.add({
         extended: { type: Types.Html, wysiwyg: true, height: 400 },
     },
     categories: { type: Types.Relationship, ref: 'PostCategory', many: true },
-    contentType: { type: Types.Select, options: 'essay, book review, interview, reading', default: 'essay', index: true },
+    contentType: { type: Types.Select, options: 'essay, book review, interview, reading, podcast', default: 'essay', index: true },
     featured: { type: Boolean, label: 'Featured', index: true },
     hidden: { type: Boolean, label: 'Hidden', index: true },
     missed: { type: Boolean, label: 'Missed', index: true },

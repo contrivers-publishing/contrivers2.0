@@ -35,7 +35,7 @@ export class NotesPipe implements PipeTransform {
     }
     this.noteNumber = text.slice(this.spot + 3, this.spot + this.space);
     this.replaceText = text.slice(this.spot, this.spot + this.space);
-    this.noteTemplate = `<span class='note' id="fnref:${this.noteNumber}">${this.noteNumber}</span>`;
+    this.noteTemplate = `<span class='note' id="fnref:${this.noteNumber}"><a href="#NA" (click)="">${this.noteNumber}</a></span>`;
     text = text.replace(this.replaceText, this.noteTemplate);
     return text;
   }

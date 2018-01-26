@@ -102,7 +102,7 @@ export class PostsService {
 
   setActiveFootnote(num: number) {
     this.activeFootnote = num;
-    this.activeFootnoteChanged.next()
+    this.activeFootnoteChanged.next();
   }
 
   getMissed() {
