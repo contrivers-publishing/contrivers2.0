@@ -16,8 +16,10 @@
                                     <li><a routerLink="/article/{{ featuredArticles[0].slug }}" rel="category tag" tabindex="0">{{ featuredArticles[0].contentType }}</a></li>
                                 </ul>
                                 <h3><a routerLink="/article/{{ featuredArticles[0].slug }}" tabindex="0">{{ featuredArticles[0].title }}</a></h3>
-                                <div class="meta">
-                                    <span>By: {{ featuredArticles[0].author.name.first }} {{ featuredArticles[0].author.name.last }}</span>
+                                <div *ngIf="article" class="meta">
+                                    <span *ngIf="!article.author2 && !article.author3">By: {{ article.author.name.first }} {{ article.author.name.last }}</span>
+                                    <span *ngIf="article.author2 && !article.author3">By: {{ article.author.name.first }} {{ article.author.name.last }} and {{ article.author2.name.first }} {{ article.author2.name.last }}</span>
+                                    <span *ngIf="article.author2 && article.author3">By: {{ article.author.name.first }} {{ article.author.name.last }}, {{ article.author2.name.first }} {{ article.author2.name.last }}, and {{ article.author3.name.first }} {{ article.author3.name.last }}</span>
                                     <span><time>Published: {{ featuredArticles[0].publishedDate | date }}</time></span>
                                     <!-- <span>Tags: {{ featuredArticles[0].tags.join(", ") }}</span> -->
                                 </div>

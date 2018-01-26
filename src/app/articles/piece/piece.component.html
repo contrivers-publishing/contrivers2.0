@@ -12,8 +12,10 @@
                 <li><a routerLink="/article/{{article.slug}}" rel="category tag">{{ article.contentType | uppercase }}</a></li>
             </ul>
             <h3><a routerLink="/article/{{article.slug}}" target="_self">{{ article.title }}</a></h3>
-            <div class="meta">
-                <span>By: {{article.author.name.first}} {{article.author.name.last}}</span>
+            <div *ngIf="article" class="meta">
+                <span *ngIf="!article.author2 && !article.author3">By: {{ article.author.name.first }} {{ article.author.name.last }}</span>
+                <span *ngIf="article.author2 && !article.author3">By: {{ article.author.name.first }} {{ article.author.name.last }} and {{ article.author2.name.first }} {{ article.author2.name.last }}</span>
+                <span *ngIf="article.author2 && article.author3">By: {{ article.author.name.first }} {{ article.author.name.last }}, {{ article.author2.name.first }} {{ article.author2.name.last }}, and {{ article.author3.name.first }} {{ article.author3.name.last }}</span>
                 <span><time>Published: {{article.publishedDate | date}}</time></span>
                 <span>Tags: {{ article.tags.join(", ") }}</span>
                 <!-- <span>105 Views</span>
