@@ -7,7 +7,9 @@
                         <header *ngIf="article">
                             <h3>{{ article.title }}</h3>
                             <div class="meta">
-                                <span>By: {{article.author.name.first}} {{article.author.name.last}}</span>
+                                <span *ngIf="!article.author2 && !article.author3">By: {{article.author.name.first}} {{article.author.name.last}}</span>
+                                <span *ngIf="article.author2 && !article.author3">By: {{article.author.name.first}} {{article.author.name.last}} and {{article.author2.name.first}} {{article.author2.name.last}}</span>
+                                <span *ngIf="article.author2 && article.author3">By: {{article.author.name.first}} {{article.author.name.last}}, {{article.author2.name.first}} {{article.author2.name.last}}, and {{article.author3.name.first}} {{article.author3.name.last}}</span>
                                 <span><time>Published: {{article.publishedDate | date}}</time></span>
                                 <span>Tags: {{ article.tags.join(", ") }}</span>
                             </div>
@@ -27,7 +29,9 @@
                         <app-social-icons></app-social-icons>
 
                         <div class="post-meta" *ngIf="article">
-                            <p class="author">By: <a href="#">{{ article.author.name.first }} {{ article.author.name.last }}</a></p>
+                            <p *ngIf="!article.author2 && !article.author3" class="author">By: <a>{{ article.author.name.first }} {{ article.author.name.last }}</a></p>
+                            <p *ngIf="article.author2 && !article.author3" class="author">By: <a>{{ article.author.name.first }} {{ article.author.name.last }} and {{ article.author2.name.first }} {{ article.author2.name.last }}</a></p>
+                            <p *ngIf="article.author2 && article.author3" class="author">By: <a>{{ article.author.name.first }} {{ article.author.name.last }}, {{ article.author2.name.first }} {{ article.author2.name.last }}, and {{ article.author3.name.first }} {{ article.author3.name.last }}</a></p>
                             <div class="post-tags" *ngIf="article">
                                 <ul>
                                     Tags:
@@ -58,7 +62,45 @@
                         </div>
                         <!-- /post-author -->
 
+                        <div *ngIf="article.author2" class="post-author">
+                            <figure class="avatar">
+                                <img alt="" src="https://2.gravatar.com/avatar/29e43607c06fb317e13c09a8a67e3532?s=90&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/29e43607c06fb317e13c09a8a67e3532?s=180&amp;d=mm&amp;r=g 2x" class="media-object img-responsive img-circle avatar-90 photo"
+                                    height="90" width="90"> </figure>
+                            <div class="author-details" *ngIf="article">
+                                <h2>{{ article.author2.name.first }} {{ article.author2.name.last }}</h2>
+                                <p [innerHTML]="article.author2.bio"></p>
+                                <!-- <ul class="social-icons small">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-envelope-o"></i></a></li>
+                                </ul> -->
+                            </div>
+                            <!-- /author-details -->
+                        </div>
+                        <!-- /post-author -->
 
+                        <div *ngIf="article.author3" class="post-author">
+                            <figure class="avatar">
+                                <img alt="" src="https://2.gravatar.com/avatar/29e43607c06fb317e13c09a8a67e3532?s=90&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/29e43607c06fb317e13c09a8a67e3532?s=180&amp;d=mm&amp;r=g 2x" class="media-object img-responsive img-circle avatar-90 photo"
+                                    height="90" width="90"> </figure>
+                            <div class="author-details" *ngIf="article">
+                                <h2>{{ article3.author.name.first }} {{ article.author3.name.last }}</h2>
+                                <p [innerHTML]="article.author3.bio"></p>
+                                <!-- <ul class="social-icons small">
+                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-envelope-o"></i></a></li>
+                                </ul> -->
+                            </div>
+                            <!-- /author-details -->
+                        </div>
+                        <!-- /post-author -->
 
                         <!-- <div class="related-posts">
                             <h6>YOU MIGHT ALSO LIKE</h6>

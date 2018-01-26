@@ -74,7 +74,7 @@ router.get('/:slug', function(req, res) {
     var q = keystone.list('Post').model.findOne({
         state: 'published',
         slug: slug,
-    }).sort('-publishedDate').populate('author categories');
+    }).sort('-publishedDate').populate('author author2 author3 categories');
 
     q.exec(function(err, results) {
         res.json(results);

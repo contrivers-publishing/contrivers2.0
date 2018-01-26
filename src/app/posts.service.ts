@@ -17,6 +17,8 @@ export class PostsService {
   pagesChanged = new Subject<void>();
   currentPage;
   currentPageChanged = new Subject<void>();
+  activeFootnote;
+  activeFootnoteChanged = new Subject<void>();
 
   constructor(private http: Http) {
     this.http = http;
@@ -92,6 +94,15 @@ export class PostsService {
           return this.featuredArticles;
         }
       );
+  }
+
+  getActiveFootnote() {
+    return this.activeFootnote;
+  }
+
+  setActiveFootnote(num: number) {
+    this.activeFootnote = num;
+    this.activeFootnoteChanged.next()
   }
 
   getMissed() {
