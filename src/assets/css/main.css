@@ -387,7 +387,7 @@ p {
 
 span.note {
     color: rgb(166, 86, 67) !important;
-    font-size: 100%;
+    font-size: 90%;
     vertical-align: super !important;
     cursor: pointer !important;
 }
