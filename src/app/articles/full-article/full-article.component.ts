@@ -10,6 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 export class FullArticleComponent implements OnInit {
   slug = 'initial slug';
   article: any = 'initial article';
+  activeFootnote = 1;
 
   constructor(private postsService: PostsService, private route: ActivatedRoute) { }
 
@@ -23,6 +24,16 @@ export class FullArticleComponent implements OnInit {
         this.article = this.postsService.currentArticle;
       }
     );
+    this.postsService.setActiveFootnote(1);
+    this.postsService.activeFootnoteChanged.subscribe(
+      () => {
+        this.activeFootnote = this.postsService.activeFootnote;
+      }
+    );
+  }
+
+  changeFootnote(num: number) {
+    this.postsService.setActiveFootnote(num);
   }
 
 }

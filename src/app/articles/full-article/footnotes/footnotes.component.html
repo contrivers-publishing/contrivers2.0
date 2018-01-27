@@ -2,7 +2,7 @@
 <div class="row col-md-12">
     <!-- Nav pills -->
     <ul class="nav nav-pills col-md-12" role="tablist">
-        <li class="col-md-1" [ngClass]="{'active': i+1==activeFootnote}" (click)="changeFootnote(i+1)" role="presentation" *ngFor="let note of footnotes; let i=index">
+        <li class="col-md-1" role="presentation" *ngFor="let note of footnotes; let i=index">
             <a href="#note{{i+1}}" role="tab" data-toggle="pill">Note {{ i+1 }}</a>
         </li>
     </ul>
@@ -10,7 +10,9 @@
 
 <!-- Pill panes -->
 <div class="tab-content col-md-12">
-    <div *ngFor="let note of footnotes; let i=index" [ngClass]="{'active': i+1 == activeFootnote}" role="tabpanel" class="tab-pane" id="note{{i+1}}">
+    <div *ngFor="let note of footnotes; let i=index" role="tabpanel" class="tab-pane" id="note{{i+1}}">
         <ul [innerHTML]="note"></ul>
+        <!-- <ul> &nbsp;<a [routerLink]="[]" fragment="fnref{{i+1}}">Return ↩</a></ul> -->
+        <ul> &nbsp;<a href="/article/{{slug}}#fnref{{i+1}}">Return ↩</a></ul>
     </div>
 </div>

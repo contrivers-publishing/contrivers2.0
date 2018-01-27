@@ -9,11 +9,13 @@ import { PostsService } from '../../../posts.service';
 })
 export class FootnotesComponent implements OnInit {
   @Input() footnotes;
-  activeFootnote;
+  @Input() slug;
+  activeFootnote = 1;
 
   constructor(private postsService: PostsService) { }
 
   ngOnInit() {
+    this.postsService.setActiveFootnote(1);
     this.postsService.activeFootnoteChanged.subscribe(
       () => {
         this.activeFootnote = this.postsService.activeFootnote;

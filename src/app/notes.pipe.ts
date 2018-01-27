@@ -12,10 +12,12 @@ export class NotesPipe implements PipeTransform {
   articleText: string;
   space: number;
   footnotes: string[];
+  slug: string;
 
-  transform(value: any): string {
+  transform(value: any, slug: string): string {
     this.articleText = value.content.extended.slice();
     this.footnotes = value.footnotes;
+    this.slug = slug;
     if (this.articleText.indexOf('###') < 0) {
       return this.articleText;
     } else {
@@ -35,7 +37,7 @@ export class NotesPipe implements PipeTransform {
     }
     this.noteNumber = text.slice(this.spot + 3, this.spot + this.space);
     this.replaceText = text.slice(this.spot, this.spot + this.space);
-    this.noteTemplate = `<span class='note' id="fnref:${this.noteNumber}"><a href="#NA" (click)="">${this.noteNumber}</a></span>`;
+    this.noteTemplate = `<span class='note' id="fnref${this.noteNumber}"><a href="/article/${this.slug}#NA">${this.noteNumber}</a></span>`;
     text = text.replace(this.replaceText, this.noteTemplate);
     return text;
   }

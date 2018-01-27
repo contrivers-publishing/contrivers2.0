@@ -15,14 +15,14 @@
                             </div>
                             <!-- /meta -->
                             <figure>
-                                <a href="#" title="{{ article.title }}"><img [src]="'http://res.cloudinary.com/dpsbqi721/image/upload/w_400,c_scale/' + article.image.public_id + '.' + article.image.format" class="attachment-full size-full wp-post-image" align="left"></a>
+                                <a title="{{ article.title }}"><img [src]="'http://res.cloudinary.com/dpsbqi721/image/upload/w_400,c_scale/' + article.image.public_id + '.' + article.image.format" class="attachment-full size-full wp-post-image" align="left"></a>
                             </figure>
                         </header>
 
-                        <div *ngIf="article" class="post-content" [innerHTML]="article | notes | safeHtml"></div>
+                        <div *ngIf="article" class="post-content" [innerHTML]="article | notes : article.slug | safeHtml"></div>
                         <!-- /post-content -->
 
-                        <div *ngIf="article && article.footnotes.length > 0" class="post-content" app-footnotes [footnotes]="article.footnotes"></div>
+                        <div *ngIf="article && article.footnotes.length > 0" class="post-content" app-footnotes [slug]="article.slug" [footnotes]="article.footnotes"></div>
 
                         <hr>
 
