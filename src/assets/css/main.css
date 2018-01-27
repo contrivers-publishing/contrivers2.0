@@ -390,6 +390,13 @@ span.note {
     font-size: 90%;
     vertical-align: super !important;
     cursor: pointer !important;
+    padding-top: 55px;
+    margin-top: -55px;
+}
+
+#NA {
+    padding-top: 55px;
+    margin-top: -55px;
 }
 
 .box-layout #wrapper {
